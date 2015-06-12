@@ -16,6 +16,7 @@ Node.js with Express, MongoDB, Dust.js, Stripe, Paypal, Amazon Payments, Cheerio
 - Paid user management
 - Ad banner manager (remote set ad visible in app)
 - Paid user activation API
+- Email notifications
 
 ### Deployment
 Azure.. because of MSDN free startup credits. :)
