@@ -1,0 +1,42 @@
+{?usersJSON}
+    {#usersJSON}
+        <tr id="{._id}" class="user">  
+            <td>{@formatIndex value="{$idx};{$len}"/}  </td>                                      
+            <td class="name">
+                {.name}
+            </td>
+            <td class="email">
+                {.email}
+            </td>
+            <!--<td>
+                {.product_key}
+            </td>-->
+            <td>
+                {.date_added}
+            </td>            
+            <td>
+                {?.donation}
+                  {#.donation}
+                  <div class="well well-sm" style="margin-bottom: 4px;">
+                    <span class="amount label label-success">${.amount}</span>&nbsp;
+                    <span class="date">{.date}</span>&nbsp;
+                    <span class="source">{.source}</span>                               
+                  </div>
+                  {/.donation}
+                {/.donation}
+            </td>
+            <td>
+                <div class="btn-group" data-toggle="buttons-radio">
+                  <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                    <i class="glyphicon glyphicon-cog"></i>&nbsp;&nbsp;<span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <!-- <li><a href="#" onclick="window.prompt('Copy to clipboard: Ctrl+C, Enter', '{.product_key}')">Get Key</a></li> -->
+                    <li><a href="#" onclick="editUser('{._id}','{.product_key}')">Edit</a></li>
+                    <li><a href="#" onclick="removeUser('{._id}')">Delete</a></li>
+                  </ul>
+                </div> 
+            </td>
+        </tr>
+    {/usersJSON}
+{/usersJSON}

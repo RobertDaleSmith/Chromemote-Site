@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{>"admin/admin_layout.dust"/}
+{<body}
+
+	<!-- <p>Please select one of the following sections to make changes.</p>
+	<div class="clear"></div>
+	<p>&nbsp</p>-->
+	<ul class="dashboard-links">
+		{^limited} 
+		<!-- <li><a class="" href="/admin/manage_ads"><div>Manage <br> Ads</div></a></li>
+		<li><a class="" href="/admin/manage_users"><div>Manage Users</div></a></li> -->
+
+		<li><div class="dash_stat">
+				<div id="dash_counter_total_paid_users" class="dash_stat_number">0</div><br>
+				<div class="dash_stat_title">Paid Users</div>
+			</div>
+		</li>
+		<li><div class="dash_stat">
+				<div class="dash_stat_number">$<span id="dash_counter_total_amount">0</span></div>
+				<div class="dash_stat_title">Total Amount</div>
+			</div>
+		</li>
+		<li><div class="dash_stat">
+				<div id="dash_counter_total_donations" class="dash_stat_number"> </div>
+				<canvas id="pieCanvas" height="160" width="160"></canvas>
+				
+				<div class="dash_stat_title"><div style="height:20px;"></div>Total Donations</div>
+			</div>
+		</li>
+		<li><div class="dash_stat">
+				<div class="dash_stat_number">$<span id="dash_counter_average_donation">0.00</span></div><br>
+				<div class="dash_stat_title">Average Donation</div>
+			</div>
+		</li>
+		<li><div class="dash_stat">
+				<div id="dash_counter_comments" class="dash_stat_number">0</div><br>
+				<div class="dash_stat_title">Current CWS<br>Comment Count</div>
+			</div>
+		</li>
+		<li><div class="dash_stat">
+				<div id="dash_counter_weekly_users" class="dash_stat_number">0</div><br>
+				<div class="dash_stat_title">Current CWS<br>Weekly Users</div>
+			</div>
+		</li>
+		
+		<li class="dash_stat_graph">
+			<div class="dash_stat">
+				<div class="dash_stat_number">
+					<canvas id="weeklyUserCanvas" height="165" width="386"></canvas>
+				</div><br>
+				<div class="dash_stat_title" style="height:20px;font-size:1em !important;">Chrome Web Store - Weekly Users</div>
+
+				<div class="update_cws" onclick="updateCWSStats();">+</div>
+			</div>
+		</li>
+		
+
+		
+
+		<div class="clear"></div>
+		{?super}
+			<li><a class="" href="/side-links"><div>Side Links</div></a></li>
+		{/super}
+		{:else}
+		<li><a class="" href="/alert"><div>Alerts</div></a></li>
+		{/limited}
+		<!--
+		<li><a href="/adminmanager">Admin Manager</a></li> -->
+	</ul>
+{/body}

@@ -1,0 +1,44 @@
+{?adsJSON}
+    {#adsJSON}
+            <tr id="{._id}" class="admin_ad">                                        
+                    <td class="admin_ad_order">
+						{.order}
+                    </td>
+                    <td>
+                    	<div class="btn-group-vertical">
+						  	<button onclick="moveAdUp('{._id}')" type="button" class="btn btn-default btn-xs"><i class="glyphicon glyphicon-arrow-up"></i></button>
+								<button onclick="moveAdDown('{._id}')" type="button" class="btn btn-default btn-xs"><i class="glyphicon glyphicon-arrow-down"></i></button>
+						</div>
+                    </td>
+                    <td><a href="/link/{._id}" target="_blank"><img src="{.img}"></a></td>
+                    <td>{.url}</td>
+                    <td>{.clicks}</td>
+                    <td>
+                    	<div class="btn-group" data-toggle="buttons-radio">
+                                {@eq key=.enabled_status value=0}
+                                        <button onclick="enableAd('{._id}')"   id="enabledBtn_{._id}"    name="includeicon" type="button" class="btn btn-default btn-xs" value="1"><i class="glyphicon glyphicon-ok"></i></button>
+                                        <button onclick="disableAd('{._id}');" id="disabledBtn_{._id}" name="includeicon" type="button" class="btn btn-default btn-xs" value="0"><i class="glyphicon glyphicon-remove"></i></button>
+                                {/eq}
+                                {@eq key=.enabled_status value=1}
+                                        <button onclick="enableAd('{._id}')"     id="enabledBtn_{._id}"    name="includeicon" type="button" class="btn btn-success btn-xs active" value="1"><i class="glyphicon glyphicon-ok"></i></button>
+                                          <button onclick="disableAd('{._id}');" id="disabledBtn_{._id}" name="includeicon" type="button" class="btn btn-default btn-xs" value="0"><i class="glyphicon glyphicon-remove"></i></button>                                                                                
+                                {/eq}
+                                {@eq key=.enabled_status value=2}
+                                        <button onclick="enableAd('{._id}')"     id="enabledBtn_{._id}"    name="includeicon" type="button" class="btn btn-default btn-xs" value="1"><i class="glyphicon glyphicon-ok"></i></button>
+                                          <button onclick="disableAd('{._id}');" id="disabledBtn_{._id}" name="includeicon" type="button" class="btn btn-danger btn-xs active" value="0"><i class="glyphicon glyphicon-remove"></i></button>
+                                {/eq}                       
+						    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+								<i class="glyphicon glyphicon-cog"></i>&nbsp;&nbsp;<span class="caret"></span>
+						    </button>
+						    <ul class="dropdown-menu">
+								<!-- <li><a href="#" onclick="editAd('{._id}')">Edit</a></li> -->
+								<li><a href="#" onclick="removeAd('{._id}')">Remove</a></li>
+						    </ul>
+					  	</div>
+
+                    </td>
+            </tr>
+    
+    {/adsJSON}
+
+{/adsJSON}

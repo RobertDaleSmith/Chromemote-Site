@@ -1,0 +1,1 @@
+Publish-AzureServiceProject -ServiceName chromemote2 -Location "East US" -Launch

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+{>"admin/admin_layout.dust"/}
+{<body}
+
+        
+        <!-- Button trigger modal -->
+        <button class="btn btn-primary btn" data-toggle="modal" data-target="#addEditUserModal" id="openAddUserModalBtn">Add</button><br><br>
+
+        <!-- Modal -->
+        <div class="modal fade" id="addEditUserModal" tabindex="-1" role="dialog" aria-labelledby="addEditUser" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="addEditUser">Add / Edit User</h4>
+              </div>
+              <div class="modal-body">
+                
+                <div class="clear" id="manage_users_menu_bar">
+                  <div id="gravatar_info">
+
+                    <div class="name"></div>
+                    <div class="location"></div>
+                    <div class="about"></div>
+
+                    <div id="user_pic"><img src="http://www.gravatar.com/avatar/000?d=http://api.chromemote.com/images/user_placeholder.png"></div>
+                  </div>
+                  
+                  <div class="manage_users_add_left_side">
+
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="name" id="add_user_name">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                      <span class="input-group-addon" style="width:default;">@</span>
+                      <input type="text" class="form-control" placeholder="email" id="add_user_email">
+                    </div>
+                    
+                    
+
+                  </div>
+                  <br><br>
+                  <div class="manage_users_add_right_side">
+
+                    <div class="input-group">
+                      <span class="input-group-addon">$</span>
+                      <input type="text" class="form-control error" id="donation_amount_input">
+                      <span class="input-group-addon">.00</span>
+                      <button id="add_donation_button" name="includeicon" type="button" class="btn btn-default" value="1"><i class="glyphicon glyphicon-plus"></i></button>
+                    </div>
+                    <br>
+                    <select class="form-control" id="donation_source_input">              
+                      <option value="paypal">PayPal</option>
+                      <option value="amazon">Amazon</option>
+                      <option value="google_wallet">Google Wallet</option>
+                    </select>
+                    <br>
+                    <div class="input-append date" id="dpYears" data-date="2013/01/05" data-date-format="yyyy/mm/dd" data-date-viewmode="years">
+                      
+                      <input class="form-control span2" size="16" type="text" value="" placeholder="yyyy/mm/dd" id="donation_date_input" data-provide="datepicker">
+                      <span class="add-on"><i class="icon-calendar"></i></span>
+                    </div>
+
+                  </div>
+
+                  <div id="edit_user_donation_list" class="" style=""></div>
+                  <input type="text" style="display:none;" value="" id="userIDtoDeleteHolder">
+                </div>
+
+
+              </div>
+              <div class="modal-footer">
+                
+                <input type="text" value="" id="edit_modal_key_view" disabled>
+                <button id="cancel_new_user_button" name="includeicon" type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                &nbsp;&nbsp;
+                <button id="save_new_user_button" name="includeicon" type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="modal fade bs-modal-sm" id="areYouSureModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="addEditUser">Delete User</h4>
+              </div>
+              <div class="modal-body">
+                
+                <div id="are_you_sure_message">Are you sure you want to delete <span class="name"></span>?</div>
+
+
+              </div>
+              <div class="modal-footer">                           
+                <button name="includeicon" type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                &nbsp;&nbsp;
+                <button id="delete_user_confirm_btn" name="includeicon" type="button" class="btn btn-danger" data-dismiss="modal">Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+          
+          
+        
+        <div class="well">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <!-- <th>Key</th> -->
+                  <th style="width:100px;">Added</th>
+                  <th style="width:250px;">Donations</th>
+                  <th style="width:50px;"></th>
+                </tr>
+              </thead>
+              <tbody id="users_list">
+                    {>"admin/partials/manage_users_user.dust"/}
+              </tbody>
+            </table>
+        </div>
+
+
+        
+{/body}

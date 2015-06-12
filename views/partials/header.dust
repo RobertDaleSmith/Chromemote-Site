@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+		<!-- partials/header.dust -->
+		<header>
+            
+            {@select key=pageName }
+            <div id="header_content" class="{@eq value="home"}home{/eq}">
+            {/select}
+                <div class="centering_content">
+                    <nav>
+                        <div id="navMenu">
+                            <div id="nav_menu_btn" class="unselectable">
+                                <div class="nav_menu_btn_line"></div><div class="nav_menu_btn_line"></div><div class="nav_menu_btn_line"></div>
+                            </div>
+                            <div id="social_media_header">
+                                <a href="http://twitter.com/chromemote" target="_blank" id="social_media_header_twitter"></a>
+                                <a href="http://facebook.com/chromemote" target="_blank" id="social_media_header_facebook"></a>
+                                <a href="https://plus.google.com/+Chromemote/" target="_blank" id="social_media_header_gplus"></a>
+                            </div>
+                        </div>
+                        <a class="icon" href="/"><img src="/images/icon.png" alt="Chromemote Icon" /></a>
+                        <ul id="menu">
+
+                            {@select key=pageName }
+                                <li><a class="nav_link {@eq value="home"}current{/eq}" href="/">Home</a></li>
+                                <li><a class="nav_link {@eq value="faq"}current{/eq}" href="/faq">FAQ</a></li>
+                                <li><a class="nav_link {@eq value="blog"}current{/eq}" href="/blog">Blog</a></li>
+                                <li><a class="nav_link contribute_header_btn" href="/support-us">Contribute</a></li>
+                            {/select}
+                            <br><br>
+                        </ul>
+                        
+                    </nav>
+                </div>
+            </div>
+
+            
+            
+        </header>

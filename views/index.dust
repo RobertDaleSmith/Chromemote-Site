@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+{>"layout.dust"/}
+
+{<body}
+		<div id="hero_content">
+                
+            <div class="centering_content">
+
+                <div id="intro_content_wrapper">
+
+                    <div id="intro_content_home">
+                        <p class="introducing">Introducing the new</p>
+                        <img class="logo" src="images/chromemote.png" alt="Chromemote Logo" />
+                        <p class="intro_description">Remotely&nbsp;control Google&nbsp;TV straight&nbsp;from&nbsp;your&nbsp;computer</p>
+                        
+                        <button class="install_button" id="install_button">
+                            <img class="downarrow" src="images/install_button.png" alt="Install Icon" />
+                            <p class="down_button_text">INSTALL NOW</p>
+                        </button>
+
+
+                        <!-- <br>
+                        <button class="install_button" id="install_button" onclick = "window.open('https://chrome.google.com/webstore/detail/bhcjclaangpnjgfllaoodflclpdfcegb','_blank');" style="width:224px;"><div style="display:inline-block; vertical-align:top; line-height:21px; margin-left:-9px;"><img src="http://chromemote.com/wp-content/themes/wp-chromemote-3.0/images/install_button_arrow.png" align="left">&nbsp;&nbsp;&nbsp;INSTALL FREE!</div></button>
+
+                        <br> -->
+                        <a class="web_store" href="https://chrome.google.com/webstore/detail/chromemote-remote-for-goo/bhcjclaangpnjgfllaoodflclpdfcegb">
+                            Available on the Chrome Web Store
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                <img class="hero_image" src="images/hero_image.png" alt="hero image" />
+                
+            </div>
+            
+        </div>
+        
+        <div id="sub_intro">
+            <div class="centering_content">
+                <a href="https://www.youtube.com/watch?v=Ok0egjv3eCk" target="_blank"><img class="video_image" src="images/video.gif" alt="video placeholder" /></a>
+                <div class="sub_intro_text_wrapper">
+                    <p class="sub_intro_text">Take a look and learn about Chromemote and what it can do!</p>
+                </div>
+            </div>
+        </div>
+		<!-- MAIN CONTENT -->
+		<div id="main_content">
+            
+            <div class="centering_content">
+                
+                
+                <h1>The right way to control TV is here</h1>
+                
+                <p class="secondary_text">
+                    Why fumble through a bunch of clunky remotes when you can use the computer in front of you?
+                </p>
+                
+                <img class="example_image" src="images/example_image.png" alt="Chromemote sending signals to Google TV" />
+                
+                <div class="half_grid">
+                    <p class="body_text">
+                        Chromemote is an extension for the Google Chrome web browser that adds full remote control of any Google TV, directly from within the web browser.
+                    </p>
+                </div>
+                
+                <div class="half_grid">
+                    <p class="body_text">
+                        An easy way to enjoy the TV experience while using a computer. Aside from basic TV controls, you can also send and control content to and from your computer.
+                    </p>
+                </div>                
+                
+            </div>
+            
+        </div>
+        
+        <div id="take_control">
+            
+            <div class="centering_content">
+                
+                <div class="half_grid">
+                    <h1>Take control<br>Fling content to your TV</h1>
+                </div>
+                <div class="half_grid">
+                    <ul class="feature_list">
+                        <li><span class="dot green"></span><p class="body_text">YouTube Videos</p></li>
+                        <li><span class="dot red"></span><p class="body_text">Websites</p></li>
+                        <li><span class="dot blue"></span><p class="body_text">Web Apps</p></li>
+                        <li><span class="dot yellow"></span><p class="body_text">Google TV Apps</p></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div id="check_it_out">
+            
+            <div class="centering_content">
+                <h1>Check it out</h1>
+
+                <div id="screenshot_carousel">
+                    
+                    <div id="carousel_image_viewport_holder">
+                        <div id="carousel_image_viewport" class="jcarousel">
+                            <ul>
+                                <li><img src="images\screens\ss1.png"></li>
+                                <li><img src="images\screens\ss2.png"></li>
+                                <li><img src="images\screens\ss3.png"></li>
+                                <li><img src="images\screens\ss4.png"></li>
+                                <li><img src="images\screens\ss5.png"></li>
+                                <li><img src="images\screens\ss6.png"></li>
+                                <li><img src="images\screens\ss7.png"></li>
+                                <li><img src="images\screens\ss8.png"></li>
+                                <li><img src="images\screens\ss9.png"></li>
+                                <li><img src="images\screens\ss10.png"></li>
+                                <li><img src="images\screens\ss11.png"></li>
+                                <li><img src="images\screens\ss12.png"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="carousel_left_btn_holder"><div id="carousel_left_btn"></div></div>
+                    <div id="carousel_right_btn_holder"><div id="carousel_right_btn"></div></div>
+                    <div class="jcarousel-pagination" id="carousel_dots" data-jcarouselpagination="true"></div>
+                </div>
+
+
+            </div>
+            
+        </div>
+        
+        <div id="contribute_banner">
+            
+            <h2>Like the app?</h2>
+            <h3>Support the team by giving back</h3>
+            <a class="contribute_button" href="/support-us">
+                <img class="heart" src="images/heart.png" alt="Contribute Icon" />
+                <p class="button_text">CONTRIBUTE</p>
+            </a>
+            
+        </div>
+		
+		<div id="social_media_call_to_action">
+            <div class="centering_content">
+                <div class="social_intro">
+                    <p class="unable">Unable to contribute?</p>
+                    <h1><i>Share</i> Chromemote with others!</h1>
+                </div>
+            </div>
+        </div>
+{/body}

@@ -1,0 +1,41 @@
+{?postsJSON}
+    {#postsJSON}
+        <tr id="{._id}" class="user">  
+                                             
+            <td>
+                <a href="/admin/blog/{.path}">{.title}</a>
+            </td>
+            <td>
+                {@makeShorter value="{.body}"/}
+            </td>
+            <td>
+                {.date}
+            </td>            
+            <td>
+                
+                    
+                <div class="btn-group" data-toggle="buttons-radio">
+                    {@if cond="{.live}"}
+                        <button onclick="publishPost('{._id}')"     id="publishBtn_{._id}"    name="includeicon" type="button" class="btn btn-success btn-xs active" value="1"><i class="glyphicon glyphicon-play"></i></button>
+                        <button onclick="unpublishPost('{._id}');" id="unpublishBtn_{._id}" name="includeicon" type="button" class="btn btn-default btn-xs" value="0"><i class="glyphicon glyphicon-pause"></i></button>
+                    {:else}
+                        <button onclick="publishPost('{._id}')"     id="publishBtn_{._id}"    name="includeicon" type="button" class="btn btn-default btn-xs" value="1"><i class="glyphicon glyphicon-play"></i></button>
+                        <button onclick="unpublishPost('{._id}');" id="unpublishBtn_{._id}" name="includeicon" type="button" class="btn btn-info btn-xs active" value="0"><i class="glyphicon glyphicon-pause"></i></button>
+                    {/if}
+                    
+                                        
+                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                        <i class="glyphicon glyphicon-cog"></i>&nbsp;&nbsp;<span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" onclick="window.open('/admin/blog/id/{._id}', '_self');">Edit</a></li>
+                        <li><a href="#" onclick="removePost('{._id}')">Remove</a></li>
+                    </ul>
+                </div>
+
+                  
+                
+            </td>
+        </tr>
+    {/postsJSON}
+{/postsJSON}

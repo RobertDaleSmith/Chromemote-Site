@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+		<!-- partials/footer.dust -->
+		<div id="social_media">
+            
+            <div class="centering_content">
+                <a class="facebook_div" target="_blank" href="http://www.facebook.com/chromemote" target="_blank">
+                    <h3>Facebook</h3>
+                    <img class="social" src="/images/facebook_big.png" alt="Facebook Icon" />
+                    <p class="social_button_text">
+                        like us<img class="go_button" src="/images/go_button.png" alt="Go button icon" />
+                    </p>
+                    <div id="footer_like_button">
+                        <fb:like href="http://www.facebook.com/chromemote/" send="false" layout="button_count" width="90" show_faces="true"></fb:like>
+                    </div>
+                </a>
+                
+                <a class="twitter_div" target="_blank" href="http://www.twitter.com/chromemote" target="_blank">
+                    <h3>Twitter</h3>
+                    <img class="social" src="/images/twitter_big.png" alt="Twitter Icon" />
+                    <p class="social_button_text">
+                        follow us<img class="go_button" src="/images/go_button.png" alt="Go button icon" />
+                    </p>
+                    <div id="footer_follow_button">
+                        <iframe allowtransparency="true" frameborder="0" scrolling="no" src="https://platform.twitter.com/widgets/follow_button.html?screen_name=chromemote&show_count=true&show_screen_name=false" style="height: 20px; width: 92px;" ></iframe>
+                    </div>
+                </a>
+                
+                <a class="googleplus_div" target="_blank" href="https://plus.google.com/+Chromemote/" target="_blank">
+                    <h3>Google+</h3>
+                    <img class="social" src="/images/googleplus_big.png" alt="Google+ Icon" />
+                    <p class="social_button_text">
+                        join our circle<img class="go_button" src="/images/go_button.png" alt="Go button icon" />
+                    </p>
+                    <div id="footer_plus_button">
+                        <g:plusone size="medium" href="https://plus.google.com/107890677565458476428"></g:plusone>
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+        
+        
+        <footer>
+            <div class="centering_content">
+                <a href="http://motelabs.com/"><img class="logo" src="/images/motelabs.png" alt="Mote Labs Logo" /></a>
+                <p><span id="copyright1">Copyright © 2012&nbsp;-&nbsp;2014 Mote&nbsp;Labs.</span> <span id="copyright2">All Rights Reserved.</span> <span id="copyright3">All other trademarks are the property of their respective owners.</span>
+                <span id="copyright4">
+                    <a href="/press/">Press</a>
+                    <a href="http://github.com/MoteLabs/">Dev</a>
+                    <a href="/get-key/">Recover Key</a>
+                    
+                </span></p>
+
+                <!-- <a href="/press" class="footer_link">Press</a> -->
+            </div>
+        </footer>

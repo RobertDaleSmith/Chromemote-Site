@@ -1,0 +1,55 @@
+{>"layout.dust"/}
+
+{<body}
+    
+        <div id="secondary_hero">
+                
+            <div class="centering_content">
+                <div id="intro_content">
+                <img class="logo_secondary" src="/images/chromemote.png" alt="Chromemote Logo" />
+                </div>
+            </div>
+            
+            
+            
+        </div>
+        
+        <div id="sub_intro">
+            <div class="centering_content">
+                <h4><span>Update</span></h4>
+            </div>
+        </div>
+        <!-- MAIN CONTENT -->
+        <div id="main_content">
+            <div class="centering_content">
+
+                <div class="blog_item">                   
+                    <div class="body">
+                        <p>
+                            We are releasing updates all the time for Chromemote. Updates should install automatically upon release. You can speed up the process by updating directly from Chromemote.com at any time.         
+                            <br><br>Latest Version: &nbsp;&nbsp;&nbsp;&nbsp; <b>v.</b><b id="latest-version">0.0</b>
+                            <br>Installed Version: &nbsp; <b>v.</b><b id="installed-version" style="color: red;">0.0</b>
+                            <br><br>
+                        </p>
+                        <p style="">
+                            <button class="update_button" id="install_button">
+                                <img class="downarrow" src="/images/install_button.png" alt="Install Icon" />
+                                <p class="down_button_text">INSTALL NOW</p>
+                            </button>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        
+       <div id="social_media_call_to_action">
+            <div class="centering_content">
+                <div class="social_intro">
+                    <!-- <p class="unable">Unable to contribute?</p> -->
+                    <h1><i>Ask</i> the Chromemote team!</h1>
+                </div>
+            </div>
+        </div>
+{/body}
