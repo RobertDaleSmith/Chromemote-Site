@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+{>"layout.dust"/}
+
+{<body}
+		<script src="/admin/js/admin_script.js"></script>
+
+		<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+		<link rel="stylesheet" href="/libs/codemirror/lib/codemirror.css" />		
+		<link rel="stylesheet" href="/libs/codemirror/addon/hint/show-hint.css">
+		<link rel="stylesheet" href="/libs/codemirror/theme/rubyblue.css">
+		<script src="/libs/codemirror/lib/codemirror.js"></script>
+		<script src="/libs/codemirror/addon/hint/show-hint.js"></script>
+		<script src="/libs/codemirror/addon/hint/javascript-hint.js"></script>
+
+		<script src="/libs/codemirror/mode/xml/xml.js"></script>
+		<script src="/libs/codemirror/mode/javascript/javascript.js"></script>
+		<script src="/libs/codemirror/mode/css/css.js"></script>		
+		<script src="/libs/codemirror/mode/vbscript/vbscript.js"></script>
+		<script src="/libs/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+		
+		<script type="text/javascript">
+		    window.onbeforeunload = function() {
+		        return "Dude, are you sure you want to leave? Think of the kittens!";
+		    }
+		</script>
+
+		
+		
+		<style>.wrapper{ padding-top: 50px; }</style>
+	{?post}
+	    {#post}
+		<div id="secondary_hero">                
+            <div class="centering_content">
+                <div id="intro_content">
+                <img class="logo_secondary" src="/images/chromemote.png" alt="Chromemote Logo" />
+                </div>
+            </div>
+        </div>
+        
+        <div id="sub_intro">
+            <div class="centering_content">
+                <h4><span>Blog</span></h4>
+            </div>
+        </div>
+
+		<!-- MAIN CONTENT -->
+		<div id="main_content">
+			<div class="centering_content">				
+				<div id="blog_roll_container">
+	                
+	                        <div class="blog_item" id="blog_post_{._id}">
+	                            <div class="head">
+	                                <div class="date_holder">
+	                                    <div class="date" title="{.date}">
+	                                        <div class="month">{@getMonth value="{.date}"/}</div>
+	                                        <div class="day">{@getDay value="{.date}"/}</div>
+	                                    </div>
+	                                </div>
+	                                <div class="title" title="{.title}" contenteditable="true">{.title}</div>
+	                            </div>
+	                            <div class="body" contenteditable="true">{.body|s}{~n}</div>
+	                        </div>
+	                    
+	            </div>
+			</div>
+		</div>
+
+		<link rel="stylesheet" type="text/css" media="all" href="/libs/datepicker/css/datepicker.css" /> 
+		<script type="text/javascript" src="/libs/datepicker/js/bootstrap-datepicker.js"></script>
+
+
+		<div id="blog_post_edit_bar">
+			<div class="input-append date" id="dpYears" data-date="{@getDate value="{.date}"/}" data-date-format="yyyy/mm/dd" data-date-viewmode="years">                      
+              <input class="form-control" size="16" type="text" value="{@getDate value="{.date}"/}" placeholder="yyyy/mm/dd" id="post_date_input" data-provide="datepicker">              
+              <span class="add-on"><i class="icon-calendar"></i></span>
+            </div>
+            <input class="form-control" id="post_time_input" value="{@getTime value="{.date}"/}">
+            <input class="form-control" id="post_id" value="{._id}" disabled>
+            {@if cond="{.live}"}
+				<input class="form-control" id="pub_status" value="true" disabled>
+			{:else}
+				<input class="form-control" id="pub_status" value="false" disabled>
+			{/if}
+            
+            <button class="btn btn-default btn-warning" id="toggleEditorButton">&lt; / &gt;</button>
+			<button class="btn btn-default btn-info"    id="saveNewPostButton">Save</button>
+
+			
+			{@if cond="{.live}"}
+				<button class="btn btn-default btn-danger" id="postNewPostButton">Unpost</button>
+			{:else}
+				<button class="btn btn-default btn-success" id="postNewPostButton">Post</button>
+			{/if}
+			
+		</div>
+		<div id="blog_post_editor">
+			<div id="blog_post_editor_title">Blog Post Body HTML/CSS/JS Editor</div>
+			<img id="blog_post_editor_title_icon" src="/images/icon.png">
+			<div id="blog_post_editor_grabber"></div>
+			<div id="blog_post_editor_side_btn"></div>
+			<div id="blog_post_editor_max_btn"></div>
+			<div id="blog_post_editor_close_btn"></div>
+			<textarea  id="code" name="code"></textarea>
+			<script>
+				var mixedMode = {
+					name: "htmlmixed",
+					scriptTypes: [	{	matches: /\/x-handlebars-template|\/x-mustache/i,
+				               			mode: null},
+				              		{	matches: /(text|application)\/(x-)?vb(a|script)/i,
+				               			mode: "vbscript"}	]
+				};
+				var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+					mode: mixedMode, 
+					tabMode: "indent",
+					lineNumbers: true,
+					lineWrapping: true,
+				    styleActiveLine: true,
+				    matchBrackets: true,
+				    theme: "rubyblue",
+				    spellCheck: "on",
+				    extraKeys: {"Ctrl-Space": "autocomplete"}
+				});				
+				editor.setValue( $('.blog_item .body').html() );
+				
+			</script>
+		</div>
+
+		{/post}
+    {/post}
+{/body}

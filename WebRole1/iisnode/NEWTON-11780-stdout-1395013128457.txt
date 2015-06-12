@@ -1,0 +1,40 @@
+Express server listening on port \\.\pipe\ee3d933f-158c-4f33-9beb-47ec13f5f97d
+[90mGET / [32m200 [90m780ms[0m
+[90mGET /fonts/Roboto-stylesheet.css [32m200 [90m26ms[0m
+[90mGET /libs/jquery/jquery.jcarousel.min.js [32m200 [90m13ms[0m
+[90mGET /js/index.js [32m200 [90m17ms[0m
+[90mGET /css/style_global.css [32m200 [90m37ms[0m
+[90mGET /libs/jquery/jquery-2.1.0.min.js [32m200 [90m39ms[0m
+[90mGET /libs/jquery/jquery-ui/js/jquery-ui-1.10.4.custom.min.js [32m200 [90m13ms[0m
+[90mGET /libs/jquery/jquery.mobile.custom.min.js [32m200 [90m15ms[0m
+[90mGET /libs/jquery/jquery-ui/css/ui-lightness/jquery-ui-1.10.4.custom.css [32m200 [90m29ms[0m
+[90mGET /images/icon.png [32m200 [90m2ms - 1.84kb[0m
+[90mGET /images/install_button.png [32m200 [90m4ms - 1.06kb[0m
+[90mGET /images/chromemote.png [32m200 [90m7ms - 8.16kb[0m
+[90mGET /images/hero_image.png [32m200 [90m9ms - 34.78kb[0m
+[90mGET /images/video.gif [32m200 [90m12ms - 2.12kb[0m
+[90mGET /images/example_image.png [32m200 [90m15ms - 20.96kb[0m
+[90mGET /images/screens/ss1.png [32m200 [90m29ms - 445.54kb[0m
+[90mGET /images/screens/ss2.png [32m200 [90m37ms - 526.38kb[0m
+[90mGET /images/screens/ss3.png [32m200 [90m30ms - 512.19kb[0m
+[90mGET /images/screens/ss4.png [32m200 [90m33ms - 517.56kb[0m
+[90mGET /images/screens/ss5.png [32m200 [90m47ms - 753.56kb[0m
+[90mGET /images/screens/ss6.png [32m200 [90m31ms - 530.48kb[0m
+[90mGET /images/screens/ss7.png [32m200 [90m4ms - 530.92kb[0m
+[90mGET /images/screens/ss8.png [32m200 [90m12ms - 514.8kb[0m
+[90mGET /images/screens/ss9.png [32m200 [90m13ms - 461.32kb[0m
+[90mGET /images/screens/ss10.png [32m200 [90m7ms - 512.88kb[0m
+[90mGET /images/screens/ss11.png [32m200 [90m22ms - 467.26kb[0m
+[90mGET /libs/bootstrap/css/bootstrap-btn.css [32m200 [90m19ms[0m
+[90mGET /images/screens/ss12.png [32m200 [90m6ms - 604.33kb[0m
+[90mGET /images/heart.png [32m200 [90m7ms - 1.36kb[0m
+[90mGET /images/go_button.png [32m200 [90m7ms - 1.33kb[0m
+[90mGET /images/facebook_big.png [32m200 [90m28ms - 1.96kb[0m
+[90mGET /images/twitter_big.png [32m200 [90m8ms - 4.06kb[0m
+[90mGET /images/googleplus_big.png [32m200 [90m12ms - 5.02kb[0m
+[90mGET /images/motelabs.png [32m200 [90m9ms - 3.9kb[0m
+[90mGET /images/social_media_header.png [32m200 [90m11ms - 3.56kb[0m
+[90mGET /images/tight_squares.png [32m200 [90m4ms - 1.03kb[0m
+[90mGET /images/loose_squares.png [32m200 [90m6ms - 1.07kb[0m
+[90mGET /images/carousel_arrow.png [32m200 [90m1ms - 1.67kb[0m
+[90mGET /images/hatching.png [32m200 [90m1ms - 1.04kb[0m

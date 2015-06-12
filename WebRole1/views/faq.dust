@@ -1,0 +1,176 @@
+{>"layout.dust"/}
+
+{<body}
+	
+		<div id="secondary_hero">
+                
+            <div class="centering_content">
+                <div id="intro_content">
+                <img class="logo_secondary" src="/images/chromemote.png" alt="Chromemote Logo" />
+                </div>
+            </div>
+            
+            
+            
+        </div>
+        
+        <div id="sub_intro">
+            <div class="centering_content">
+                <h4><span>FAQ</span></h4>
+            </div>
+        </div>
+		<!-- MAIN CONTENT -->
+		<div id="main_content">
+            <div class="centering_content">
+                <p class="faq_body_text">Tap question to reveal answer.</p>
+                <div id="faq_list_container">
+                    <div class="faq_item" index="1" name="what-is-chromemote">
+                        <div class="head unselectable">
+                            <div class="toggle">+</div>           
+                            <div class="title">1. What is Chromemote?</div>
+                        </div>
+                        <div class="body">
+                            
+                            Chromemote is a browsers extension for Google Chrome that integrates remote control of Google TV into the web browser. Right click on any link and Fling it to your TV. Chromemote also provides full remote control interface that can be accessed from a popup window. You can also pin this window to a tab within your browser. With Chromemote you can use your laptops keyboard and touchpad to control your TV. No more need to reach for a remote when you are surfing the internet on your laptop and watching TV at the same time. 
+                            <br><br>
+                            Chromemote is available in the Chrome Web Store and can be downloaded directly to Chrome web browsers by clicking the install button at the top of every page on this website
+                        </div>
+                    </div>
+                    <div class="faq_item" index="2" name="why-google-tv">
+                        <div class="head unselectable">
+                            <div class="toggle">+</div>           
+                            <div class="title">2. Why Google TV and what is Google TV?</div>
+                        </div>
+                        <div class="body">                            
+                            Google TV is awesome, thats why. :) Actually I had received a Google TV device in a developer contest and wanted to show my thanks by building something really awesome for Google TV. Also Google TV is the perfect platform for having a shared experience between watching TV and surfing the internet on your other devices. Many people use a second device such as a tablet or laptop while watching TV. Google TV is a smart TV platform with a full web browser to allow you to merge your existing TV experience with the web. 
+                            <br><br>
+                            <iframe width="100%" height="315" src="http://www.youtube.com/embed/jmqvqgBCP0A" frameborder="0" allowfullscreen=""></iframe>
+                        </div>
+                    </div>
+                    <div class="faq_item" index="3" name="chromemote-features">
+                        <div class="head unselectable">
+                            <div class="toggle">+</div>           
+                            <div class="title">3. What features does Chromemote have?</div>
+                        </div>
+                        <div class="body">                            
+                            Chromemote offers full remote control of multiple Google TV devices. Use your laptop or desktop computer keyboard and mouse to remotely navigate the web on your TV. Chromemote integrates the ability to fling web content to paired Google TV devices. Images, web pages, selected text, and web links can be right clicked on and from a context menu option you can instantly fling that content to open on the big screen. Many users requested the ability to pin the popup remote to stay open, so I recently added the ability to pin Chromemote to a tab in Chrome. This keeps the remote open for extended use.
+                        </div>
+                    </div>
+
+                    <div class="faq_item" index="4" name="features-coming">
+                        <div class="head unselectable">
+                            <div class="toggle">+</div>           
+                            <div class="title">4. What features are coming soon to Chromemote?</div>
+                        </div>
+                        <div class="body">                          
+                            We are currently developing the ability for users to fully customize the remote control interface. First will be button customization. You will be able to rearrange buttons, edit all the remote buttons, and change the icons on each button. Second will be the ability to not only select alternate themes but a feature to import and export themes. We want to allow the DIY users out there to create and share their own remote control themes. We also want to build an TV app launcher interface, add ChromeOS support, add the ability to sync you TV channel list with Chromemote, and many many more features. 
+                            <br><br>
+                            Actually we are more interested in what you want to see Chromemote do. Contact the developer directly with your ideas and thoughts at robert@chromemote.com.
+                        </div>
+                    </div>
+                
+                    <div class="faq_item" index="5" name="how-dows-it-work">
+                        <div class="head unselectable">
+                            <div class="toggle">+</div>           
+                            <div class="title">5. How does Chromemote work?</div>
+                        </div>
+                        <div class="body">                          
+                            Chromemote is made possible by the power of the Google TV platform. Chromemote is able to discover and pair with Google TV devices attached to the same local area network. Once paired with a Google TV, your Google Chrome web browser is now ready to send any remote commands, web content, mouse movements, keyboard commands, etc.
+                        </div>
+                    </div>
+                
+                    <div class="faq_item" index="6" name="chrome-os">
+                        <div class="head unselectable">
+                            <div class="toggle">+</div>           
+                            <div class="title">6. Will Chrome OS support be added?</div>
+                        </div>
+                        <div class="body">                          
+                            <div style="text-decoration:line-through">Yes, we are actively researching a way to make it possible for Chrome OS to communicate with Google TV devices.</div>
+                            Chromemote now supports ChromeOS with the help of the Chromemote Anymote Bridge app for Google TV. Install the extension on your ChromeOS device and then install the brdige app on your Google TV.
+                            <br><br>
+                            Chromemote Anymote Bridge app for Google TV:
+                            <br>
+                            <a href="https://play.google.com/store/apps/details?id=com.motelabs.chromemote.bridge">https://play.google.com/store/apps/details?id=com.motelabs.chromemote.bridge</a>
+                        </div>
+                    </div>
+                
+                    <div class="faq_item" index="7" name="to-fling-or-not-to-fling">
+                        <div class="head unselectable">
+                            <div class="toggle">+</div>           
+                            <div class="title">7. What the heck is a fling?</div>
+                        </div>
+                        <div class="body">                          
+                            Chromemote adds a menu option to the right click context menu that allows you to send web content to your TV instantly. Right click a link to a YouTube video on your laptop and then click 'Fling to Google TV' to have that link open start playing on the TV.
+                        </div>
+                    </div>
+                
+                    <div class="faq_item" index="8" name="fling-to-tv">
+                        <div class="head unselectable">
+                            <div class="toggle">+</div>           
+                            <div class="title">8. How do I fling websites to my TV?</div>
+                        </div>
+                        <div class="body">                          
+                            Once you have paired with a Google TV device you can fling almost any web content to your TV. Right click on links, images, selected text, and web pages to access the 'Fling to Google TV' option. Simply click Fling to Google TV to fling the web content to the TV.
+                        </div>
+                    </div>
+                
+                    <div class="faq_item" index="9" name="share-keyboard-mouse">
+                        <div class="head unselectable">
+                            <div class="toggle">+</div>           
+                            <div class="title">9. How do I share my keyboard and mouse?</div>
+                        </div>
+                        <div class="body">                          
+                            Once you are paired with a Google TV, your keyboard will be automatically shared with the Google TV each time you open the popup or tabbed Chromemote remote interface. So when you open the Chromemote UI, you can just start typing on your computers keyboard to send the commands to your TV. Many keyboard keys have ben mapped to improve control. Such as the CTRL acts as the Google TV search button. To control the cursor on your Google TV, you just have to click the cursor icon on Chromemote to access the touchpad interface. Click and drag your mouse over the touch pad to move the cursor on the TV. Do a single click on the touch pad to send the left mouse click to the Google TV.
+                        </div>
+                    </div>
+                
+                    <div class="faq_item" index="5" name="compatibility">
+                        <div class="head unselectable">
+                            <div class="toggle">+</div>           
+                            <div class="title">10. Computer compatibility?</div>
+                        </div>
+                        <div class="body">                          
+                            Chromemote is compatible with Google Chrome running on Windows, Linux, and Mac OSX. Oh yea and of course now <a href="#chrome-os">Chrome OS is supported</a>.
+                        </div>
+                    </div>
+                
+                    <div class="faq_item" index="5" name="how-to-share-the-love">
+                        <div class="head unselectable">
+                            <div class="toggle">+</div>
+                            <div class="title">11. How can I help make Chromemote better?</div>
+                        </div>
+                        <div class="body">                          
+                            We built our dream, but is it yours? Tell us what we missed or what you love about Chromemote. Also feel free to leave a donation. Chromemote is honor-ware, which means you pay only what you can afford for Chromemote. If you can not afford it, then continue to use for free with our blessing. We want to share our work with the world so please tell all your friends about Chromemote.
+                        </div>
+                    </div>
+                
+                    <div class="faq_item" index="5" name="secured-and-safe">
+                        <div class="head unselectable">
+                            <div class="toggle">+</div>
+                            <div class="title">12. What is up with the permissions level?</div>
+                        </div>
+                        <div class="body">                          
+                            Chromemote uses a special type of plugin to communicate with Google TV. The Google Chrome Web store gives every Chrome extension using an NPAPI plugin this permissions level warning. The api plugin was built and developed by Google TV developers so it is safe.
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+        
+        
+       <div id="social_media_call_to_action">
+            <div class="centering_content">
+                <div class="social_intro">
+                    <!-- <p class="unable">Unable to contribute?</p> -->
+                    <h1><i>Ask</i> the Chromemote team!</h1>
+                </div>
+            </div>
+        </div>
+{/body}

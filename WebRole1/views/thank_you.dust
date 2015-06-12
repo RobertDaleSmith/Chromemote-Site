@@ -1,0 +1,72 @@
+{>"layout.dust"/}
+
+{<body}
+
+        <script src="https://checkout.stripe.com/checkout.js"></script>
+
+	    <div id="secondary_hero">                
+            <div class="centering_content">
+                <div id="intro_content">
+                <img class="logo_secondary" src="/images/chromemote.png" alt="Chromemote Logo" />
+                </div>
+            </div>
+        </div>
+        
+        <div id="sub_intro_contrib">
+            <div class="centering_content">
+                <h4><span>Thank you!</span></h4>
+            </div>
+        </div>
+		<!-- MAIN CONTENT -->
+		
+        <div id="main_content">
+        
+            <div class="centering_content">
+                
+                
+                    
+                    <h1>Thank you again!</h1>
+                    <p class="secondary_text">
+                        You will receive an email with your activation key to remove ads from your chromemote.<br>All money goes towards aiding the development of Chromemote, current & future projects of Mote Labs, and quality assurance.
+                    </p>
+                    
+                    <br><br><br><br>
+                    <div class="half_grid_1">
+                        <h5 class="codeTitle">Code</h5>
+                        
+                        <p class="small_body_text">
+                            If you are interested in contributing code leave us your email and you will be contacted.
+                        </p>
+                        
+                        <input class="contribute_form" name="email" type="text" placeholder="Email" />
+                        <div class="contribute_submit_holder"><div id="submit_comment_btn" class="contribute_submit">REQUEST</div></div>
+                        
+                    </div>
+                    
+                    <div class="half_grid_2">
+                        <div class="ccc_mid_spacer"></div>
+                        <h5 class="commentTitle">Comment</h5>
+                        
+                        <input class="contribute_form" name="name" type="text" placeholder="Name" />
+                        <input class="contribute_form" name="email" type="text" placeholder="Email" />
+                        <textarea class="contribute_form" name="text" placeholder="Message" maxlength="500"></textarea>
+                        <div class="contribute_submit_holder"><div id="submit_code_signup_btn" class="contribute_submit">SUBMIT</div></div>
+                                                
+                    </div>
+                
+                
+                
+            </div>
+            
+        </div>
+        
+
+        <div id="social_media_call_to_action">
+            <div class="centering_content">
+                <div class="social_intro">
+                    <p class="unable">Don't stop there..</p>
+                    <h1><i>Share</i> Chromemote with others!</h1>
+                </div>
+            </div>
+        </div>
+{/body}

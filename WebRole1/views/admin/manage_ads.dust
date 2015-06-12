@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{>"admin/admin_layout.dust"/}
+{<body}
+
+        
+        <!-- Button trigger modal -->
+        <button class="btn btn-primary btn" data-toggle="modal" data-target="#addNewAdModalBtn" id="openAddNewAdModalBtn">Add</button><br><br>
+
+        <!-- Modal -->
+        <div class="modal fade" id="addNewAdModalBtn" tabindex="-1" role="dialog" aria-labelledby="addEditUser" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="addEditUser">Add New Ad</h4>
+              </div>
+              <div class="modal-body">
+                
+                <div class="clear" id="manage_ads_menu_bar">
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="manual_ad_image_url_input" name="adNewAddImageUrlInput" placeholder="Image URL" value="">
+                  </div>
+                  <br><br>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="manual_ad_link_url_input" name="adNewAddLinkUrlInput" placeholder="Link URL" value="">
+                  </div>
+                </div>
+
+
+              </div>
+              <div class="modal-footer">
+                <button id="cancel_new_ad_button" name="includeicon" type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                &nbsp;&nbsp;
+                <button id="add_new_ad_button" name="includeicon" type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        
+        
+        
+        <div class="well">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th>Image</th>
+                  <th>Link</th>
+                  <th>Clicks</th>
+                  <th style="width: 115px;">Enabled</th>
+                </tr>
+              </thead>
+              <tbody id="admin_ads_list">
+                    {>"admin/partials/manage_ads_ad.dust"/}
+              </tbody>
+            </table>
+        </div>
+
+
+        
+{/body}

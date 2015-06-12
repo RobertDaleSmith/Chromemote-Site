@@ -1,0 +1,71 @@
+{>"layout.dust"/}
+
+{<body}
+	
+		<div id="secondary_hero">
+                
+            <div class="centering_content">
+                <div id="intro_content">
+                <img class="logo_secondary" src="/images/chromemote.png" alt="Chromemote Logo" />
+                </div>
+            </div>
+            
+            
+            
+        </div>
+        
+        <div id="sub_intro">
+            <div class="centering_content">
+                <h4><span>Blog</span></h4>
+            </div>
+        </div>
+		<!-- MAIN CONTENT -->
+		<div id="main_content">
+			<div class="centering_content">
+                <div id="blog_search_container">
+                	<input class="contribute_form" id="search_input" name="search" type="text" placeholder="Search">
+                	<div id="blog_year_links">
+                		&nbsp;
+                		<a href="#2014">2014</a>
+                		<a href="#2013">2013</a>
+                		<a href="#2012">2012</a>
+                        <a href="/press">Press</a>
+                		<!-- <a href="#">>></a> -->
+                	</div>
+                </div>
+                <div id="blog_roll_container">
+
+                    {?postsJSON}
+                        {#postsJSON}                            
+                            <div class="blog_item" id="blog_post_{._id}">
+                                <div class="head">
+                                    <div class="date_holder">
+                                        <div class="date" title="{.date}">
+                                            <div class="month">{@getMonth value="{.date}"/}</div>
+                                            <div class="day">{@getDay value="{.date}"/}</div>
+                                        </div>
+                                    </div>
+                                    <div class="title"><a href="/blog/{.path}">{.title}</a></div>
+                                </div>
+                                <div class="body">{.body|s}{~n}</div>
+                            </div>
+                        {/postsJSON}
+                    {/postsJSON}
+                	
+
+                </div>
+
+
+            </div>
+
+		</div>
+
+		<div id="social_media_call_to_action">
+            <div class="centering_content">
+                <div class="social_intro">
+                    <!-- <p class="unable">Unable to contribute?</p> -->
+                    <h1><i>Follow</i> Chromemote!</h1>
+                </div>
+            </div>
+        </div>
+{/body}

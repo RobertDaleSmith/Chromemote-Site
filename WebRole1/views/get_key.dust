@@ -1,0 +1,56 @@
+{>"layout.dust"/}
+
+{<body}
+
+        <script src="https://checkout.stripe.com/checkout.js"></script>
+
+	    <div id="secondary_hero">                
+            <div class="centering_content">
+                <div id="intro_content">
+                <img class="logo_secondary" src="/images/chromemote.png" alt="Chromemote Logo" />
+                </div>
+            </div>
+        </div>
+        
+        <div id="sub_intro_contrib">
+            <div class="centering_content">
+                <h4><span>Activation Key</span></h4>
+            </div>
+        </div>
+		<!-- MAIN CONTENT -->
+		
+        <div id="main_content" class="get_key_main_content">
+        
+            <div class="centering_content">
+                
+                
+                    
+                <form class="well" id="request_key_container">
+					<p>Request your activation key by submitting your email address below.</p><br>
+					<input class="contribute_form"  id="email_address_input" name="email" type="text" placeholder="email">
+					<br>
+					<div class="contribute_submit_holder">
+						<div id="get_key_button" class="contribute_submit">GET KEY</div>
+					</div>
+				</form><br>
+				<div id="alert_box" class="alert alert-success" style="">
+					<p>Success: Your product key is surfing its way to your email inbox now...</p>
+				</div>
+					
+                
+                
+                
+            </div>
+            
+        </div>
+        
+
+        <div id="social_media_call_to_action">
+            <div class="centering_content">
+                <div class="social_intro">
+                    <!-- <p class="unable">Don't stop there..</p> -->
+                    <h1><i>Share</i> Chromemote with others!</h1>
+                </div>
+            </div>
+        </div>
+{/body}

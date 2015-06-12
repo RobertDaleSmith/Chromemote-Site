@@ -1,0 +1,205 @@
+{>"layout.dust"/}
+
+{<body}
+
+        <script src="https://checkout.stripe.com/checkout.js"></script>
+
+	    <div id="secondary_hero">                
+            <div class="centering_content">
+                <div id="intro_content">
+                <img class="logo_secondary" src="/images/chromemote.png" alt="Chromemote Logo" />
+                </div>
+            </div>
+        </div>
+        
+        <div id="sub_intro_contrib">
+            <div class="centering_content">
+                <h4><span>Contribute</span></h4>
+                <!-- <img class="video_image_contribute" src="/images/video.gif" alt="video placeholder"> -->
+            </div>
+        </div>
+		<!-- MAIN CONTENT -->
+		
+        <div id="main_content">
+        
+            <div class="centering_content">
+                
+                
+                    
+                <h1>You can help build the future</h1>
+                <p class="secondary_text">
+                    Please help the team continue the production of Chromemote by contributing cash, code, or comments. 
+                    Contribute and ads will be removed from your Chromemote.
+                </p>
+                
+                <br><br><br><br>
+                <div class="half_grid_1">
+                    <h5 class="cashTitle">Cash</h5>
+                    <p class="small_body_text">Chromemote is honor-ware, which means you pay what you want. Contributing money will remove ads from your Chromemote also!<br>Use the slider below to select amount.</p>
+                    
+                    
+                    <p class="small_body_text"><div id="slider"></div></p>
+
+                    <p class="small_body_text2">YOUR DONATION</p>
+
+                    <div class="contribute_cash_submit_holder">
+                        <span class="currency unselectable">USD</span>
+                        <input class="contribute_cash_submit" id="amount" name="amount" type="text" placeholder="$" disabled/>
+                    </div>
+                    
+                    <div class="contribute_payment_type_holder">
+                        <div class="contribute_payment_type">
+                            <div class="value">Select payment type</div>
+                            <div class="arrow"></div>
+                        </div>                
+                        <div class="contribute_payment_type_drop unselectable">
+                            <div class="payment_type">Amazon Payments</div>
+                            <div class="payment_type">Credit Card</div>                                
+                            <div class="payment_type">PayPal</div>
+                        </div>            
+                    </div>
+                    <div class="contribute_continue_holder"><div class="contribute_continue" id="continuePayment">CONTINUE</div></div>
+                    <span id="paypal-xclick-form">
+                        <form id="paypal-form" style="display: inline" action="https://www.paypal.com/cgi-bin/webscr"
+                          method="post" name="_xclick" target="_blank">
+                          <input type="hidden" name="cmd" value="_donations">
+                          <input type="hidden" name="business" value="donate@chromemote.com">
+                          <input type="hidden" name="item_name" value="Chromemote Tip Jar Contribution">
+                          <input type="hidden" name="item_number" id="tracking-input" value="CCMTJ01">
+                          <input type="hidden" name="amount" id="paypal_amount_input">
+                          <input type="hidden" name="currency_code" value="USD">
+                          <input type="hidden" name="no_note" value="0">
+                          <input type="hidden" name="return" value="http://chromemote.com/support-us/thank-you/">
+                          <input type="hidden" name="cancel" value="http://chromemote.com/support-us/">
+                          <input type="hidden" name="rm" value="2">
+                          <input type="hidden" name="cbt" value="Go Back To Chromemote.com" />
+                          <input type="hidden" name="no_shipping" value="1" />
+                          
+                        </form>
+                      </span>
+
+                    <div class="ccc_left_spacer"></div>
+                    <!-- <h5>Where does the money go?</h5>
+                    
+                    <p class="body_text_it">
+                        All money goes towards aiding the development of Chromemote, current & future projects of Mote Labs, and quality assurance.
+                    </p> -->
+                    
+                        <div class="ccc_mid_spacer"></div>
+                        <h5 class="codeTitle">Code</h5>
+                        
+                        <p class="small_body_text" id="dev_signup_msg">                    
+                            Pull the source code, fix bugs, add features, and commit code at: &nbsp;&nbsp;<a href="http://github.com/MoteLabs/" target="_blank">github.com/MoteLabs</a>
+                        </p>
+                        
+                        
+                </div>
+                
+                <div class="half_grid_2">
+                    <div class="ccc_mid_spacer"></div>
+                    <h5 class="tipJarTitle">Tip Jar</h5>
+                    
+                    <p class="small_body_text" id="dev_signup_msg">                    
+                        <b>{stats.proUserTotal}</b> out of <b>{stats.weeklyUserCount}</b> users have left <b>{stats.donationTotal}</b> tips averaging <b>${stats.donationAvg}</b> and totally <b>${stats.amountTotal}</b>.
+                        <br>
+                        <div class="project-pledged-wrap">
+                            <div class="project-pledged" style="width: {stats.percentageToGoal}%;"><div class="total">${stats.amountTotal}</div></div>
+                            <div class="goal">${stats.weeklyUserCount}</div>
+                        </div>
+
+                    </p>
+                    
+                    <div class="ccc_right_spacer"></div>
+                    <h5 class="commentTitle">Comment</h5>
+                    
+                    <input class="contribute_form" name="name" type="text" placeholder="Name" id="comment_name" />
+                    <input class="contribute_form" name="email" type="text" placeholder="Email" id="comment_email" />
+                    <textarea class="contribute_form" name="text" placeholder="Message" maxlength="500" id="comment_msg"></textarea>
+                    <div class="contribute_submit_holder"><div id="submit_comment_btn" class="contribute_submit">SUBMIT</div></div>
+                </div>
+                <!--script type="text/javascript" src="https://payments-sandbox.amazon.com/cba/js/PaymentWidgets.js"></script-->
+                <script type="text/javascript" src="https://static-na.payments-amazon.com/cba/js/us/PaymentWidgets.js"></script>
+                <script>
+                RenderCBAButtonById = function(ordervalue, buttonid) {
+                var standard1 = new CBA.Widgets.StandardCheckoutWidget({
+                merchantId: "A23LNMUKQCZLNM",
+                orderInput: {
+                format: "XML",
+                value: ordervalue}
+                }).render(buttonid);
+                }
+                </script>
+
+                <table style="display:none;"><tr>
+                    <form action="https://authorize.payments.amazon.com/pba/paypipeline" method="post">
+                        <input type="hidden" name="returnUrl" value="http://chromemote.com/support-us/thank-you" >
+                        <input type="hidden" name="ipnUrl" value="http://chromemote.com/support-us/iopn" >
+                        <input type="hidden" name="processImmediate" value="1" >
+                        <input type="hidden" name="signatureMethod" value="HmacSHA256" >
+                        <input type="hidden" name="accessKey" value="11SEM03K88SD016FS1G2" >
+                        <input type="hidden" name="amount" id="amazonDonationAmount" value="USD 30" >
+                        <input type="hidden" name="collectShippingAddress" value="0" >
+                        <input type="hidden" name="isDonationWidget" value="0" >
+                        <input type="hidden" name="amazonPaymentsAccountId" value="NCCKQXLFMFNN424PN3NA638ZMIM15A49RJK85N" >
+                        <input type="hidden" name="referenceId" value="CMTJ-Amazon" >
+                        <input type="hidden" name="cobrandingStyle" value="logo" >
+                        <input type="hidden" name="immediateReturn" value="1" >
+                        <input type="hidden" name="description" value="Chromemote Contribution" >
+                        <input type="hidden" name="abandonUrl" value="http://chromemote.com/support-us/" >
+                        <input type="hidden" name="signatureVersion" value="2" >
+                        <input type="hidden" name="signature" id="amazonSignature" value="aeKxII+kjGMipk6B79xSCwXkR7tWK8mgLf+2YtpaSNA=" >
+                    <td>$&nbsp;
+                        <input type="text" name="amount" size="8" value="30">
+                    </td>
+                    <td>&nbsp;</td>
+                    <td><input type="image" src="http://g-ecx.images-amazon.com/images/G/01/asp/beige_small_donate_withmsg_lightbg.gif" border="0" id="amazon_btn"></td>
+                    </form>
+                    </tr>
+                </table>
+                
+            </div>
+            
+        </div>
+
+        <!-- <div id="chromemote_story_container">
+            <div class="centering_content">
+                <div class="story_content">
+
+                    <div class="ccc_bottom_spacer"></div>
+
+                    <img src="/images/settings_about_dev2.png" style="padding-right:20px;" align="left"> &nbsp;&nbsp;Hello, My name is Robert (<a href="http://www.twitter.com/RobertDaleSmith" class="faq-link2" target="_blank">@RobertDaleSmith</a>), the creator of Chromemote. This all started in late January 2012 with a crazy dream I had where I was able to control everything through a smart TV. Immediately after waking from that dream I got to work to see what was possible. 
+
+                    <br><br>
+                    &nbsp;&nbsp;It wasn't long before I realized I could program IR commands from any remote control into my Google TV.  I then set it up to control my bedroom remote control dimmer light switch, an air conditioner unit, a TV, and even an Apple TV. With Google TV I can control everything from the single remote/keyboard that came with the Google TV.
+
+                    <br><br>
+                    &nbsp;&nbsp;I then ran into a problem. I am almost always on my desktop computer or laptop computer when I am watching TV, and it became a pain to have multiple keyboards. I thought that is was ridiculous that I could not use a computer to control a modern smart TV. I then set out with the mission to develop a port of the Google TV Remote App for Android to a Google Chrome extension.
+                    <br>
+
+                    <br>                &nbsp;&nbsp;While developing the extension I received an email from the university about an event called <a href="http://www.3DayStartup.org/" target="_blank" class="faq-link2">3DayStartup</a> coming up at my school. I was really passionate about the idea I was developing so I took a chance and submitted an application. I was one of forty student selected to participate in the University of Houston's first ever <a href="http://www.3DayStartup.org/" target="_blank" class="faq-link2">3DayStartup</a> event in April. During the event I pitched Chromemote and was able to take it all the way to the final pitches. 
+
+                    <br><br>
+                    &nbsp;&nbsp;Following the event I continued to work on building a working prototype. I decided for the summer break between semesters, I was not going to stop working on Chromemote until I made the vision a reality. I quit my job and didn't sign up for any summer courses. I launched a startup around Chromemote and started finding out if this was something that anybody actually wanted. By mid-July I had a working beta version ready to launch to the world. 
+
+                    <br><br>
+                    &nbsp;&nbsp;The response so far has been great and I really appreciate everyone's support and donations through this journey to bridge the gap between the devices we use most often and smart TVs. There is so much more to come in the near future!
+
+                    <div class="contribute_continue_holder leave_a_tip"><div class="contribute_continue" id="leaveTipButton">LEAVE A TIP</div></div>
+
+                    <div class="ccc_bottom_spacer"></div>
+                </div>
+
+                
+                
+            </div>
+        </div> -->
+
+        <div id="social_media_call_to_action">
+            <div class="centering_content">
+                <div class="social_intro">
+                    <p class="unable">Unable to contribute?</p>
+                    <h1><i>Share</i> Chromemote with others!</h1>
+                </div>
+            </div>
+        </div>
+{/body}

@@ -1,0 +1,36 @@
+{
+
+	"dbConfig": {
+		
+		"name"      : "chromemote",
+		"url"       : "",
+		"port"      : 10000,
+		"username"  : "",
+		"password"  : "",
+		"secret"    : "",
+		"cookieStr"	: ""
+
+	},
+	
+	"mailConfig": {
+		
+		"user"		: "robert@chromemote.com", 
+		"password"	: "",
+		"host"		: "mail.chromemote.com"
+
+	},
+
+	"stripeConfig"	: {
+
+		"testKey"	: "",
+		"liveKey"	: ""
+
+	},
+
+	"keygenConfig"	: {
+
+		"cipher"	: ""
+
+	}
+
+}

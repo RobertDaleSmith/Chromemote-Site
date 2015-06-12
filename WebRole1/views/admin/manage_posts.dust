@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{>"admin/admin_layout.dust"/}
+{<body}
+
+        
+        <!-- Button trigger modal -->
+        <a class="btn btn-primary btn" id="addNewBlogPostBtn" href="/admin/blog/new">Add</a><br><br>
+
+        <div class="well">
+            <table class="table">
+              <thead>
+                <tr>                  
+                  <th style="width: 305px;">Title</th>
+                  <th>Preview</th>
+                  <th style="width: 160px;">Posted</th>
+                  <th style="min-width: 110px;"></th>
+                </tr>
+              </thead>
+              <tbody id="users_list">
+                    {>"admin/partials/manage_posts_post.dust"/}
+              </tbody>
+            </table>
+        </div>
+
+
+        
+{/body}

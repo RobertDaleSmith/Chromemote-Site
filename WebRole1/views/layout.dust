@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml" lang="en">
+
+	<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# 
+	                  website: http://ogp.me/ns/website#">
+	    <meta charset="UTF-8">
+	    <title>{title}</title>    
+
+	    <meta name="title"        content="Chromemote - The Google TV Remote Control for Chrome" />
+	    <meta name="copyright"    content="MoteLabs.com - 2014" />
+	    <meta name="email"        content="robert@motelabs.com" />
+	    <meta name="description" content="Chromemote.com - A Better Way To Control Google TV. Chromemote is an extension for the Google Chrome web browser that adds full remote control of any Google TV, directly from within the web browser itself." />
+	    <meta name="keywords" content="Chromemote, Chrome, Google, Google TV, Remote, Wireless, Second Screen, App, Chrome Extension">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta name="apple-mobile-web-app-capable" content="yes" /> <!-- This will remove the Safari web browsers address bar & bookmarks bar giving your web page a native appearance -->
+	    
+	    <meta property="fb:app_id" content="508653672520377" />
+	    <meta property="fb:admins" content="537257174" />  
+	    <meta property="og:title" content="Chromemote - The Google TV Remote Control for Chrome" />
+	    <meta property="og:url" content="http://chromemote.com/" >
+	    <meta property="og:site_name" content="Chromemote.com - The Google TV Remote for Chrome" />
+	    <meta property="og:author" content="537257174" />
+	    <meta property="og:type" content="article" />
+	    <meta property="og:image" content="http://chromemote.com/images/logo_512.png" />
+
+	    <link rel="stylesheet" href="/fonts/Roboto-stylesheet.css" type="text/css" media="all" />
+	    <link rel="stylesheet" href="/css/style_global.css" type="text/css" media="all" />
+
+	    
+
+	    <script type="text/javascript" src="/libs/jquery/jquery-2.1.0.min.js" charset="utf-8"></script>
+	    <script type="text/javascript" src="/libs/jquery/jquery.jcarousel.min.js" charset="utf-8"></script>
+	    <script type="text/javascript" src="/js/index.js" charset="utf-8"></script>
+
+	    <link rel="stylesheet" type="text/css" media="all" href="/libs/bootstrap/css/bootstrap-btn.css" />
+
+	    <link rel="stylesheet" href="/libs/jquery/jquery-ui/css/ui-lightness/jquery-ui-1.10.4.custom.css" type="text/css" media="all" />
+	    <script type="text/javascript" src="/libs/jquery/jquery-ui/js/jquery-ui-1.10.4.custom.min.js" charset="utf-8"></script>
+	    <script type="text/javascript" src="/libs/jquery/jquery.mobile.custom.min.js" charset="utf-8"></script>
+
+	    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/bhcjclaangpnjgfllaoodflclpdfcegb">
+
+		
+	    <script type="text/javascript">
+			var analyticsFileTypes = ['crx'];
+			var analyticsEventTracking = 'enabled';
+		</script>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-30458910-1']);
+		    _gaq.push(['_addDevId', 'i9k95']);
+		        
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+
+	<body id="body_container">	
+		<div id="fb-root"></div>
+	    <script>(function(d, s, id) {
+	            var js, fjs = d.getElementsByTagName(s)[0];
+	            if (d.getElementById(id)) return;
+	            js = d.createElement(s); js.id = id;
+	            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=508653672520377";
+	            fjs.parentNode.insertBefore(js, fjs);
+	        }(document, 'script', 'facebook-jssdk'));
+	    </script>
+	    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	    <div class="wrapper">
+			{>"partials/header.dust"/}
+			
+			{+body/}
+			
+			{>"partials/footer.dust"/}
+		</div>
+
+		<a href="https://plus.google.com/111291216195697323432?rel=author"></a>
+	</body>
+
+</html>
+
+
+
+
