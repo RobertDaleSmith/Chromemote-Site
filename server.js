@@ -33,7 +33,7 @@ dust.helpers.formatIndex = function (chunk, context, bodies, params) {
 
 dust.helpers.getMonth = function (chunk, context, bodies, params) {
   var text = dust.helpers.tap(params.value, chunk, context);
-  console.log(text);
+  // console.log(text);
   var res = parseInt(text.substring(5,7));
   switch(res) {
     case 1:  res = "Jan"; break; case 2:  res = "Feb"; break; case 3:  res = "Mar"; break;
@@ -41,6 +41,12 @@ dust.helpers.getMonth = function (chunk, context, bodies, params) {
     case 7:  res = "Jul"; break; case 8:  res = "Aug"; break; case 9:  res = "Sept";break;
     case 10: res = "Oct"; break; case 11: res = "Nov"; break; case 12: res = "Dec"; break;
   }
+  return chunk.write(res);
+}
+
+dust.helpers.getYear = function (chunk, context, bodies, params) {
+  var text = dust.helpers.tap(params.value, chunk, context);
+  var res = parseInt(text.substring(0,4));
   return chunk.write(res);
 }
 

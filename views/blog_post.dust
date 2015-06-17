@@ -4,15 +4,11 @@
 {<body}
 		
 		<div id="secondary_hero">
-                
             <div class="centering_content">
                 <div id="intro_content">
                 <img class="logo_secondary" src="/images/chromemote.png" alt="Chromemote Logo" />
                 </div>
             </div>
-            
-            
-            
         </div>
         
         <div id="sub_intro">
@@ -43,16 +39,12 @@
 	                            	<a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-hashtags="Chromemote">Tweet</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 	                            	<div id="plusone_holder"><div class="g-plusone" data-size="tall" data-annotation="none" style="height:20px;"></div></div>
-	                            	
 	                            </div>
 	                            <div id="disqus_thread"></div>
-							    
-    
 	                        </div>
 	                    {/post}
 	                {/post}
 	            </div>
 			</div>
 		</div>
-	
 {/body}

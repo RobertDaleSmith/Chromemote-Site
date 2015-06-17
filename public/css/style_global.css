@@ -740,7 +740,7 @@ p.small_body_text {
     color: #a3a3a3;
     font-family: RobotoLight, Arial, Helvetica, sans-serif;
     text-align: left;
-    margin: 20px 10% 10px 10%;
+    margin: 20px 10% 40px 10%;
 }
     p.small_body_text b{
         font-family: RobotoRegular, Arial, Helvetica, sans-serif;
@@ -749,13 +749,25 @@ p.small_body_text {
         font-family: RobotoLightItalic, Arial, Helvetica, sans-serif;
     }
 
+    p.small_body_text#dev_signup_msg {
+        margin-bottom: 20px;
+    }
+
+    p.small_body_text .how{
+        display: inline-block;
+        position: relative;
+        line-height: 18px;
+        height: 26px;
+        font-size: 0.9em;
+    }
+
 p.small_body_text2 {
     font-size: 0.8em;
     line-height: 2em;
     color: #a3a3a3;
     font-family: RobotoBold, Arial, Helvetica, sans-serif;
     text-align: left;
-    margin: 20px 10% 0 10%;
+    margin: 40px 10% 0 10%;
     letter-spacing: 1px;
 }
 
@@ -965,7 +977,11 @@ img.go_button {
 }
 
 .contribute_form {
+    display: inline-block;
+    position: relative;
+    height: auto;
     width: calc(77.5% - 4px);
+    max-width: calc(77.5% - 4px);
     margin: 10px 10% 10px 10%;
     border: solid 2px #e3e3e3;
     border-radius:4px;
@@ -1231,6 +1247,23 @@ img.go_button {
 
 }
 
+.contribute_submit#submit_agree_btn{
+    background-color: #AEAEAE;
+    -webkit-box-shadow: inset 0 -6px #838383;
+            box-shadow: inset 0 -6px #838383;
+}
+.contribute_submit#submit_agree_btn:hover {
+    border-width: 0px;
+}
+.contribute_submit#submit_agree_btn:active {
+    border-width: 0px;
+    height:24px;
+    top:4px;
+    -webkit-box-shadow: inset 0 1px #838383;
+    box-shadow: inset 0 1px #838383;
+
+}
+
 .ccc_left_spacer{    
     display: block;
     position: relative;
@@ -1243,7 +1276,7 @@ img.go_button {
     display: block;
     position: relative;
     height: 2px;
-    margin:50px 10% 30px 10%;
+    margin:26px 10% 30px 10%;
     background-color:#e8e9e9;
 }
 
@@ -1260,7 +1293,7 @@ img.go_button {
     display: none;
     position: relative;
     height: 2px;
-    margin:40px 10% 60px 10%;
+    margin:40px 10% 40px 10%;
     background-color:#e8e9e9;
 }
 
@@ -1357,9 +1390,17 @@ img.go_button {
 }
 .blog_item .head .date .day{
     font-family: RobotoBold, Arial, Helvetica, sans-serif;
-    font-size: 2.75em;
+    font-size: 2.25em;
+    letter-spacing: -0.05em;
+    line-height: 1.1em;
+}
+
+.blog_item .head .date .year{
+    font-family: RobotoLight, Arial, Helvetica, sans-serif;
+    font-size: 1em;
     letter-spacing: -0.05em;
     line-height: 1em;
+    margin-top: 2px;
 }
 
 .blog_item .head .title{
@@ -2102,19 +2143,20 @@ have a fixed width and height (but it's not required).
     background-repeat: no-repeat;
     background-position: top right;
     margin-top: 0px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     line-height: 40px;
     height: 40px;
 }
 
 
 #slider{
+    height: 24px;
     width:80%;
     margin: 25px 10% 25px 10%;
 }
 
 .half_grid_2 textarea{
-    height:186px;
+    height:90px;
     font-family: RobotoRegular, Arial, Helvetica, sans-serif;
     
     font-size: 1.5em;
@@ -2988,3 +3030,59 @@ p.press_body_text {
     margin-left: 0px;
     margin-right: 0px;
 }
+
+#sunset_msg{
+    display: inline-block;
+    position: absolute;
+    top: -40px; left: -10px;
+    height: auto; min-height: 100%;
+    width: calc(100% - 80px + 12px);
+    
+    background-color: rgba(0,0,0,0.80);
+    border-radius: 5px;
+    z-index: 10;
+    text-align: center;
+    padding: 40px;
+}
+    #sunset_msg .close{
+        display: inline-block;
+        position: absolute;
+        top:10px; right: 10px;
+        width: 40px; height: 40px;
+        font-size: 40px;
+        line-height: 40px;
+        color:#fff;
+        font-family: RobotoLight, Arial, Helvetica, sans-serif;
+        text-align: center;
+        cursor: pointer;
+        background-color:rgba(255,255,255,0.1);
+    }
+    #sunset_msg .close:hover{
+        background-color:rgba(255,255,255,0.2);
+    }
+    #sunset_msg .close:active{
+        background-color:rgba(255,0,0,0.7);
+    }
+
+
+    #sunset_msg .sunset_icon{
+        display: inline-block;
+        position: relative;
+        width: 200px; height: auto;
+        margin: 10px 0 0 0;
+
+    }
+
+    #sunset_msg .msg{
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin: 40px 0 32px 0;
+        color: #fff;
+        font-family: RobotoLight, Arial, Helvetica, sans-serif;
+        text-align: left;
+        line-height: 37px;
+        font-size: 18px;
+
+    }

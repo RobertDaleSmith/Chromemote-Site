@@ -1,4 +1,4 @@
-$(window).bind("load", function() {
+$(window).bind("ready", function() {
     
     //Initialize the screen-shot carousel.
 	initCarousel();
@@ -19,6 +19,10 @@ $(window).bind("load", function() {
 	initSupportComments();
 
 	initUpdatePage();
+
+	$("#sunset_msg .close, #submit_agree_btn").click(function(){
+		$("#sunset_msg").css('display','none');
+	});
 
 	var cws = new inlineCWS("bhcjclaangpnjgfllaoodflclpdfcegb");
 
