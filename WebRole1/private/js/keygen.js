@@ -1,15 +1,12 @@
+var keygenInfo, keyGen = new productKeyGen();
 try {
 	module.exports = {
 		getKey: function (s) {
 			return keyGen.getKey(s);
-		}	
+		}
 	};
+	keygenInfo = require('config').get('keygenConfig');
 } catch(e){}
-
-var config = require('config');
-var keygenInfo = config.get('keygenConfig');
-
-var keyGen = new productKeyGen();
 
 // User key generator generates a key based on email address.
 function productKeyGen() {

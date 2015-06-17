@@ -34,8 +34,9 @@
                 
                 <br><br><br><br>
                 <div class="half_grid_1">
+
                     <h5 class="cashTitle">Cash</h5>
-                    <p class="small_body_text">Chromemote is honor-ware, which means you pay what you want. Contributing money will remove ads from your Chromemote also!<br>Use the slider below to select amount.</p>
+                    <p class="small_body_text">Chromemote is honor-ware, which means you pay what you want. Contributing money will remove ads from your Chromemote also!<br><br><span class="how">Use the slider below to select amount.</span></p>
                     
                     
                     <p class="small_body_text"><div id="slider"></div></p>
@@ -78,26 +79,38 @@
                         </form>
                       </span>
 
-                    <div class="ccc_left_spacer"></div>
+                    <!-- <div class="ccc_left_spacer"></div> -->
                     <!-- <h5>Where does the money go?</h5>
                     
                     <p class="body_text_it">
                         All money goes towards aiding the development of Chromemote, current & future projects of Mote Labs, and quality assurance.
                     </p> -->
                     
-                        <div class="ccc_mid_spacer"></div>
-                        <h5 class="codeTitle">Code</h5>
-                        
-                        <p class="small_body_text" id="dev_signup_msg">                    
-                            Pull the source code, fix bugs, add features, and commit code at: &nbsp;&nbsp;<a href="http://github.com/MoteLabs/" target="_blank">github.com/MoteLabs</a>
-                        </p>
+                        <!-- <div class="ccc_mid_spacer"></div> -->
                         
                         
+                    <div id="sunset_msg">
+                        <div class="close">x</div>
+
+                        <img src="/images/sunset_icon.png" class="sunset_icon">
+
+                        <div class="msg">
+                            &nbsp; &nbsp;The sun has set on Chromemote. Although continued development has ended, I would still love to hear from you. If you enjoyed using Chromemote over the years and/or want to support my future projects, then feel free to hit me up anytime. Tips are always welcomed as well, every cent goes back into hosting costs and dev of new ideas.
+                        </div>
+
+                        <div class="contribute_submit_holder"><div id="submit_agree_btn" class="contribute_submit">I UNDERSTAND</div></div>
+
+                    </div>
                 </div>
                 
                 <div class="half_grid_2">
                     <div class="ccc_mid_spacer"></div>
-                    <h5 class="tipJarTitle">Tip Jar</h5>
+                    <h5 class="codeTitle">Code</h5>
+                        
+                        <p class="small_body_text" id="dev_signup_msg">                    
+                            Pull the source code, fix bugs, add features, and commit code at: &nbsp;&nbsp;<a href="https://github.com/RobertDaleSmith?tab=repositories" target="_blank">github.com/MoteLabs</a>
+                        </p>
+                    <!-- <h5 class="tipJarTitle">Tip Jar</h5>
                     
                     <p class="small_body_text" id="dev_signup_msg">                    
                         <b>{stats.proUserTotal}</b> out of <b>{stats.weeklyUserCount}</b> users have left <b>{stats.donationTotal}</b> tips averaging <b>${stats.donationAvg}</b> and totally <b>${stats.amountTotal}</b>.
@@ -107,7 +120,7 @@
                             <div class="goal">${stats.weeklyUserCount}</div>
                         </div>
 
-                    </p>
+                    </p> -->
                     
                     <div class="ccc_right_spacer"></div>
                     <h5 class="commentTitle">Comment</h5>
