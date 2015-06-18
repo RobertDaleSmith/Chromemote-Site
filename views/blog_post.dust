@@ -29,6 +29,7 @@
 	                                    <div class="date" title="{.date}">
 	                                        <div class="month">{@getMonth value="{.date}"/}</div>
 	                                        <div class="day">{@getDay value="{.date}"/}</div>
+	                                        <div class="year">{@getYear value="{.date}"/}</div>
 	                                    </div>
 	                                </div>
 	                                <div class="title" title="{.title}">{.title}</div>

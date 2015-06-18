@@ -383,7 +383,8 @@ function inlineCWS(id){
 		    if(document.getElementById("install_button")){
 		        document.getElementById("install_button").onclick = install;
 		    }
-		} else window.open('https://chrome.google.com/webstore/detail/bhcjclaangpnjgfllaoodflclpdfcegb','_blank');
+		} 
+		// else window.open('https://chrome.google.com/webstore/detail/bhcjclaangpnjgfllaoodflclpdfcegb','_blank');
 
 	    if (document.getElementById('extension-is-installed')) {
 	        if(document.getElementById("install_button")){
