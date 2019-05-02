@@ -108,6 +108,9 @@ mongo.connect(function(err) {
             username: dbInfo.username,
             password: dbInfo.password,
             collection: 'admin-sessions'
+        },
+        function(err){
+            console.log(err || 'connect-mongodb setup ok');
         }),
         cookie: { maxAge: 24*60*60*1000 }
     }));
