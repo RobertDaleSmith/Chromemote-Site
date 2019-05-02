@@ -8,7 +8,7 @@
 		"username"  : "chromemote",
 		"password"  : "",
 		"secret"    : "super-secret",
-		"cookieStr"	: "super-secret",
+		"cookieStr"	: "secret-cookie",
 		"collections": [
 			"admin-sessions",
 			"admin-users",

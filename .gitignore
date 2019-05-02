@@ -1,6 +1,7 @@
 bin
 source
 node_modules
+package-lock.json
 dev_conf.js
 # Compiled source #
 ###################

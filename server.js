@@ -16,7 +16,7 @@ var dbInfo = {
   username: process.env.DB_USER || dbConfig.username,
   password: process.env.DB_PASS || dbConfig.password,
   secret: process.env.SECRET || dbConfig.secret,
-  cookieStr: process.env.SECRET || dbConfig.secret,
+  cookieStr: dbConfig.cookieStr,
   collections: dbConfig.collections,
 };
 
@@ -100,7 +100,7 @@ mongo.connect(function(err) {
     app.use(express.static(__dirname + '/public', {redirect: false}));
     app.use(express.bodyParser({ keepExtensions: true, uploadDir: __dirname + "/tmp" }));
     app.use(express.methodOverride());
-    app.use(express.cookieParser(dbInfo.cookieString));
+    app.use(express.cookieParser(dbInfo.cookieStr));
     app.use(express.session({
         secret: dbInfo.secret,
         store: new MongoStore({
