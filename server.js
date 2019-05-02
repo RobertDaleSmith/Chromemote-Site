@@ -6,6 +6,7 @@ var express = require('express')
   , MongoStore = require( 'connect-mongodb' )
   , config = require('config');
 
+var session = require('express-session');
 var app = express();
 
 var dbConfig = config.get('dbConfig');
@@ -101,16 +102,13 @@ mongo.connect(function(err) {
     app.use(express.bodyParser({ keepExtensions: true, uploadDir: __dirname + "/tmp" }));
     app.use(express.methodOverride());
     app.use(express.cookieParser(dbInfo.cookieStr));
-    app.use(express.session({
+    app.use(session({
         secret: dbInfo.secret,
         store: new MongoStore({
             db: mongo.getDB(),
             username: dbInfo.username,
             password: dbInfo.password,
             collection: 'admin-sessions'
-        },
-        function(err){
-            console.log(err || 'connect-mongodb setup ok');
         }),
         cookie: { maxAge: 24*60*60*1000 }
     }));
