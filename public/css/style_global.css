@@ -2178,6 +2178,10 @@ have a fixed width and height (but it's not required).
     text-align: right;
 }
 
+#saveNewPostButton {
+    margin-left: 8px;
+}
+
 #blog_post_editor{
     display: block;
     position: fixed !important;
