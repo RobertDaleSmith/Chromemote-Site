@@ -33,7 +33,7 @@
   },
   "license": "BSD",
   "engines": {
-    "node": "4.10.0",
+    "node": "4.9.1",
     "npm": "2.1.17",
     "issnode": "*",
     "iisnode": "0.1.21"
