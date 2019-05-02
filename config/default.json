@@ -3,13 +3,23 @@
 	"dbConfig": {
 		
 		"name"      : "chromemote",
-		"url"       : "",
-		"port"      : 10000,
-		"username"  : "",
+		"url"       : "localhost",
+		"port"      : 27017,
+		"username"  : "chromemote",
 		"password"  : "",
-		"secret"    : "",
-		"cookieStr"	: ""
-
+		"secret"    : "super-secret",
+		"cookieStr"	: "super-secret",
+		"collections": [
+			"admin-sessions",
+			"admin-users",
+			"blog-posts",
+			"paid-users",
+			"press-links",
+			"sponsor-ads",
+			"store-stats",
+			"update-log",
+			"dev-signup"
+		]
 	},
 	
 	"mailConfig": {
