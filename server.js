@@ -8,9 +8,17 @@ var express = require('express')
 
 var app = express();
 
-var dbInfo = config.get('dbConfig');
-dbInfo.collections = ["admin-sessions", "admin-users", "blog-posts", "paid-users", "press-links", 
-                      "sponsor-ads", "store-stats", "update-log", "dev-signup" ];
+var dbConfig = config.get('dbConfig');
+var dbInfo = {
+  name: process.env.DB_NAME || dbConfig.name,
+  url: process.env.DB_PATH || dbConfig.url,
+  port: process.env.DB_PORT || dbConfig.port,
+  username: process.env.DB_USER || dbConfig.username,
+  password: process.env.DB_PASS || dbConfig.password,
+  secret: process.env.SECRET || dbConfig.secret,
+  cookieStr: process.env.SECRET || dbConfig.secret,
+  collections: dbConfig.collections,
+};
 
 var mongo = new (require('./libs/Mongo').Mongo)(dbInfo);
 
