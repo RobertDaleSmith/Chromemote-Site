@@ -106,10 +106,14 @@ Main.prototype.contribute = function( req, res, next ){
 		    		}
 		    	}
 
-		    	var percentageToGoal = (amountTotal / (weeklyUsers[weeklyUsers.length-1].users)) * 100;
+		    	var weeklyStat = weeklyUsers[weeklyUsers.length-1];
+		    	var weeklyUserCount = weeklyStat && weeklyStat.users ? weeklyStat.users : 0;
+		    	var percentageToGoal = (amountTotal / weeklyUserCount) * 100;
+
+
 		    	stats = {	
 		    			"proUserTotal" : commafy(proUserTotal),
-		    			"weeklyUserCount"  : commafy( weeklyUsers[weeklyUsers.length-1].users ),
+		    			"weeklyUserCount"  : commafy(weeklyUserCount),
 		    			"donationTotal": commafy(donationTotal),
 		    			"donationAvg"  : donationAvg,
 					   	"amountTotal"  : commafy(amountTotal.toFixed(2)),
