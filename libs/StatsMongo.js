@@ -130,7 +130,7 @@ StatsMongo.prototype.findOneStat = function ( statID, callback ) {
 StatsMongo.prototype.getAll = function (callback) {
 	
 	//Gets all docs.
-	this.stats.find({ $query: {}, $orderby: { date : -1 } }).toArray(function(err, docs) {
+	this.stats.find({ $query: {} }).sort({ date: -1 }).toArray(function(err, docs) {
 		//console.log("All docs: " + docs);
 		callback(err, docs);
 	});

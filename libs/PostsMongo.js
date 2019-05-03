@@ -253,7 +253,7 @@ PostsMongo.prototype.count = function () {
 PostsMongo.prototype.getAll = function (callback) {
 	
 	//Gets all docs.
-	this.posts.find({ $query: {}, $orderby: { _id : -1 } }).toArray(function(err, docs) {
+	this.posts.find({ $query: {} }).sort({ _id: -1 }).toArray(function(err, docs) {
 		//console.log("All docs: " + docs);
 		callback(err, docs);
 	});
@@ -262,7 +262,7 @@ PostsMongo.prototype.getAll = function (callback) {
 
 PostsMongo.prototype.getLivePosts = function (callback) {
 
-	this.posts.find({ $query: { live: true }, $orderby: { date : -1 } }).toArray(function(err, docs) {
+	this.posts.find({ $query: { live: true } }).sort({ date: -1 }).toArray(function(err, docs) {
 		callback(err, docs);
 	});
 	
@@ -272,7 +272,7 @@ PostsMongo.prototype.checkForNewPosts = function (postID, callback) {
 	//console.log(postID);
 	//postID = "381966172352049152";
 
-	this.posts.find({ $query: { approval_status: 1 }, $orderby: { id_str : -1 } }).toArray(function(err, docs) {
+	this.posts.find({ $query: { approval_status: 1 } }).sort({ id_str: -1 }).toArray(function(err, docs) {
 		var obj = [];
 		for(var i = 0; i < docs.length; i++){
 			if(docs[i].id_str == postID)
@@ -287,7 +287,7 @@ PostsMongo.prototype.checkForNewPosts = function (postID, callback) {
 PostsMongo.prototype.getAllEnabled = function (callback) {
 	
 	//Gets all docs.
-	this.posts.find({ $query: { enabled_status: 1 }, $orderby: { order : 1 } }).toArray(function(err, docs) {
+	this.posts.find({ $query: { enabled_status: 1 } }).sort({ order: 1 }).toArray(function(err, docs) {
 		//console.log("All docs: " + docs);
 		callback(err, docs);
 	});
@@ -297,7 +297,7 @@ PostsMongo.prototype.getAllEnabled = function (callback) {
 PostsMongo.prototype.getAllWinners = function (callback) {
 	
 	//Gets all docs.
-	this.posts.find({ winner_status: { $gt: 0 } }).sort( { winner_status : -1 } ).toArray(function(err, docs) {
+	this.posts.find({ winner_status: { $gt: 0 } }).sort({ winner_status : -1} ).toArray(function(err, docs) {
 		//console.log("All docs: " + docs);
 		callback(err, docs);
 	});
@@ -307,7 +307,7 @@ PostsMongo.prototype.getAllWinners = function (callback) {
 PostsMongo.prototype.getRecent = function (callback) {
 	
 	//Gets recent 10 docs.
-	this.posts.find({ $query: {}, $orderby: { id_str : -1 } }).limit(10).toArray(function(err, docs) {
+	this.posts.find({ $query: {} }).limit(10).sort({ id_str: -1 }).toArray(function(err, docs) {
 		//console.log("All docs: " + docs);
 		callback(err, docs);
 	});
@@ -318,7 +318,7 @@ PostsMongo.prototype.getRecent = function (callback) {
 PostsMongo.prototype.getRecentApproved = function (callback) {
 	
 	//Gets recent 10 docs that are approved.
-	this.posts.find({ $query: { approval_status: 1 }, $orderby: { id_str : -1 } }).limit(10).toArray(function(err, docs) {
+	this.posts.find({ $query: { approval_status: 1 } }).limit(10).sort({ id_str: -1 }).toArray(function(err, docs) {
 		//console.log("All docs: " + docs);
 		callback(err, docs);
 	});

@@ -289,7 +289,7 @@ UsersMongo.prototype.count = function () {
 UsersMongo.prototype.getAll = function (callback) {
 	
 	//Gets all docs.
-	this.users.find({ $query: {}, $orderby: { date_added : -1 } }).toArray(function(err, docs) {
+	this.users.find({ $query: {} }).sort({ date_added: -1 }).toArray(function(err, docs) {
 		//console.log("All docs: " + docs);
 		callback(err, docs);
 	});
@@ -300,7 +300,7 @@ UsersMongo.prototype.checkForNewUsers = function (userID, callback) {
 	//console.log(userID);
 	//userID = "381966172352049152";
 
-	this.users.find({ $query: { approval_status: 1 }, $orderby: { id_str : -1 } }).toArray(function(err, docs) {
+	this.users.find({ $query: { approval_status: 1 } }).sort({ id_str: -1 }).toArray(function(err, docs) {
 		var obj = [];
 		for(var i = 0; i < docs.length; i++){
 			if(docs[i].id_str == userID)
@@ -315,7 +315,7 @@ UsersMongo.prototype.checkForNewUsers = function (userID, callback) {
 UsersMongo.prototype.getAllEnabled = function (callback) {
 	
 	//Gets all docs.
-	this.users.find({ $query: { enabled_status: 1 }, $orderby: { order : 1 } }).toArray(function(err, docs) {
+	this.users.find({ $query: { enabled_status: 1 } }).sort({ order: 1 }).toArray(function(err, docs) {
 		//console.log("All docs: " + docs);
 		callback(err, docs);
 	});
@@ -335,7 +335,7 @@ UsersMongo.prototype.getAllWinners = function (callback) {
 UsersMongo.prototype.getRecent = function (callback) {
 	
 	//Gets recent 10 docs.
-	this.users.find({ $query: {}, $orderby: { id_str : -1 } }).limit(10).toArray(function(err, docs) {
+	this.users.find({ $query: {} }).sort({ id_str: -1 }).limit(10).toArray(function(err, docs) {
 		//console.log("All docs: " + docs);
 		callback(err, docs);
 	});
@@ -346,7 +346,7 @@ UsersMongo.prototype.getRecent = function (callback) {
 UsersMongo.prototype.getRecentApproved = function (callback) {
 	
 	//Gets recent 10 docs that are approved.
-	this.users.find({ $query: { approval_status: 1 }, $orderby: { id_str : -1 } }).limit(10).toArray(function(err, docs) {
+	this.users.find({ $query: { approval_status: 1 } }).sort({ id_str: -1 }).limit(10).toArray(function(err, docs) {
 		//console.log("All docs: " + docs);
 		callback(err, docs);
 	});

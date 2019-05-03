@@ -238,7 +238,7 @@ AdsMongo.prototype.count = function () {
 AdsMongo.prototype.getAll = function (callback) {
 	
 	//Gets all docs.
-	this.ads.find({ $query: {}, $orderby: { order : 1 } }).toArray(function(err, docs) {
+	this.ads.find({ $query: {} }).sort({ order: 1 }).toArray(function(err, docs) {
 		//console.log("All docs: " + docs);
 		callback(err, docs);
 	});
@@ -249,7 +249,7 @@ AdsMongo.prototype.checkForNewAds = function (adID, callback) {
 	//console.log(adID);
 	//adID = "381966172352049152";
 
-	this.ads.find({ $query: { approval_status: 1 }, $orderby: { id_str : -1 } }).toArray(function(err, docs) {
+	this.ads.find({ $query: { approval_status: 1 } }).sort({ id_str: -1 }).toArray(function(err, docs) {
 		var obj = [];
 		for(var i = 0; i < docs.length; i++){
 			if(docs[i].id_str == adID)
@@ -264,7 +264,7 @@ AdsMongo.prototype.checkForNewAds = function (adID, callback) {
 AdsMongo.prototype.getAllEnabled = function (callback) {
 	
 	//Gets all docs.
-	this.ads.find({ $query: { enabled_status: 1 }, $orderby: { order : 1 } }).toArray(function(err, docs) {
+	this.ads.find({ $query: { enabled_status: 1 } }).sort({ order: 1 }).toArray(function(err, docs) {
 		//console.log("All docs: " + docs);
 		callback(err, docs);
 	});
@@ -284,7 +284,7 @@ AdsMongo.prototype.getAllWinners = function (callback) {
 AdsMongo.prototype.getRecent = function (callback) {
 	
 	//Gets recent 10 docs.
-	this.ads.find({ $query: {}, $orderby: { id_str : -1 } }).limit(10).toArray(function(err, docs) {
+	this.ads.find({ $query: {} }).limit(10).sort({ id_str: -1 }).toArray(function(err, docs) {
 		//console.log("All docs: " + docs);
 		callback(err, docs);
 	});
@@ -295,7 +295,7 @@ AdsMongo.prototype.getRecent = function (callback) {
 AdsMongo.prototype.getRecentApproved = function (callback) {
 	
 	//Gets recent 10 docs that are approved.
-	this.ads.find({ $query: { approval_status: 1 }, $orderby: { id_str : -1 } }).limit(10).toArray(function(err, docs) {
+	this.ads.find({ $query: { approval_status: 1 } }).limit(10).sort({ id_str: -1 }).toArray(function(err, docs) {
 		//console.log("All docs: " + docs);
 		callback(err, docs);
 	});
