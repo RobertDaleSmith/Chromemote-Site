@@ -1,5 +1,7 @@
 "use strict";
-var ObjectID = require('mongodb').ObjectID;
+var BSON = require('bson').BSONPure;
+var mongo = require('mongodb');
+var ObjectID = mongo.ObjectID;
 
 /*
 This object will take a db object.
@@ -118,8 +120,6 @@ StatsMongo.prototype.findOne = function ( query, callback ) {
 }
 
 StatsMongo.prototype.findOneStat = function ( statID, callback ) {
-	var mongo = require('mongodb');
-	var BSON = mongo.BSONPure;
 	var o_id = new BSON.ObjectID(statID);
 
 	this.stats.findOne({ $query: { _id: o_id } }, function (error, stat) {

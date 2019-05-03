@@ -1,7 +1,8 @@
 "use strict";
-var async = require("async")
-   , util = require('util')
-   ;
+var async = require("async");
+var BSON = require('bson').BSONPure;
+var mongo = require('mongodb');
+var util = require('util');
 
 var statsDB, postsDB, statsScraper;
 
@@ -126,8 +127,6 @@ Admin.prototype.posts = function( req, res ){
 Admin.prototype.editPostFromId = function( req, res ){
 	res.locals.loggedIn = req.session.loggedIn;
 	
-	var mongo = require('mongodb');
-	var BSON = mongo.BSONPure;
 	var o_id = new BSON.ObjectID(req.params.postId);
 
 	postsDB.findOne({"_id": o_id }, function(error, doc){
@@ -170,8 +169,6 @@ Admin.prototype.updatePost = function( req, res ){
 Admin.prototype.removePost = function( req, res ){
 	// console.log(req.body.donation);	
 
-	var mongo = require('mongodb');
-	var BSON = mongo.BSONPure;
 	var o_id = new BSON.ObjectID(req.body.dbID);
 
 	var obj = {};
@@ -360,8 +357,6 @@ Admin.prototype.addNewAd = function( req, res ){
 }
 
 Admin.prototype.removeAd = function( req, res ){
-	var mongo = require('mongodb');
-	var BSON = mongo.BSONPure;
 	var o_id = new BSON.ObjectID(req.body.dbID);
 
 	var obj = {};
@@ -398,9 +393,6 @@ Admin.prototype.addNewUser = function( req, res ){
 }
 
 Admin.prototype.removeUser = function( req, res ){
-
-	var mongo = require('mongodb');
-	var BSON = mongo.BSONPure;
 	var o_id = new BSON.ObjectID(req.body.dbID);
 
 	var obj = {};

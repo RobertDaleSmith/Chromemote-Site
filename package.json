@@ -10,6 +10,7 @@
   "dependencies": {
     "async": "*",
     "bcrypt-nodejs": "*",
+    "bson": "0.4.6",
     "cheerio": "*",
     "config": "*",
     "connect-mongodb": "1.1.5",

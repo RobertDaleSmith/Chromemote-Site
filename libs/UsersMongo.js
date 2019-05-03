@@ -1,5 +1,7 @@
 "use strict";
-var ObjectID = require('mongodb').ObjectID;
+var BSON = require('bson').BSONPure;
+var mongo = require('mongodb');
+var ObjectID = mongo.ObjectID;
 
 /*
 This object will take a db object.
@@ -56,8 +58,6 @@ UsersMongo.prototype.insertAndReturn = function( user, callback ){
 	function update(user, callback){
 		// console.log("............");
 		// console.log(user.donation);
-		var mongo = require('mongodb');
-		var BSON = mongo.BSONPure;
 		var o_id = new BSON.ObjectID(user._id+"");	
 
 		usersDB.update(	
@@ -115,8 +115,6 @@ UsersMongo.prototype.findAndModifyUser = function( query, user, callback ){
 		return callback( 'No data was provided' );
 	}
 	
-	// var mongo = require('mongodb');
-	// var BSON = mongo.BSONPure;
 	// var o_id = new BSON.ObjectID(query.dbID);
 
 	// this.users.findAndModify( query, {	'_id':o_id
@@ -130,9 +128,6 @@ UsersMongo.prototype.findAndModifyUser = function( query, user, callback ){
 
 
 UsersMongo.prototype.findAndIncrementUser = function( userID, callback ){
-		
-	var mongo = require('mongodb');
-	var BSON = mongo.BSONPure;
 	var o_id = new BSON.ObjectID(userID);
 	
 	this.users.findOne({ $query: { _id: o_id } }, function (error, user) {
@@ -271,8 +266,6 @@ UsersMongo.prototype.findOne = function ( query, callback ) {
 
 
 UsersMongo.prototype.findOneUser = function ( userID, callback ) {
-	var mongo = require('mongodb');
-	var BSON = mongo.BSONPure;
 	var o_id = new BSON.ObjectID(userID);
 
 	this.users.findOne({ $query: { _id: o_id } }, function (error, user) {
@@ -398,8 +391,6 @@ UsersMongo.prototype.updateUser = function (dbID, name, email, donation, callbac
 	
 	console.log(donation);
 
-	var mongo = require('mongodb');
-	var BSON = mongo.BSONPure;
 	var o_id = new BSON.ObjectID(dbID);
 
 	this.users.update(	{_id: o_id },
@@ -420,8 +411,6 @@ UsersMongo.prototype.updateOrder = function (dbID, statusVal, callback) {
 	// console.log(dbID);
 	// console.log(statusVal);
 	
-	var mongo = require('mongodb');
-	var BSON = mongo.BSONPure;
 	var o_id = new BSON.ObjectID(dbID);
 
 	this.users.update(	{_id: o_id },

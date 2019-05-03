@@ -1,5 +1,7 @@
 "use strict";
-var ObjectID = require('mongodb').ObjectID;
+var BSON = require('bson').BSONPure;
+var mongo = require('mongodb');
+var ObjectID = mongo.ObjectID;
 
 /*
 This object will take a db object.
@@ -77,8 +79,6 @@ PostsMongo.prototype.findAndModifyPost = function( query, post, callback ){
 		return callback( 'No data was provided' );
 	}
 	
-	// var mongo = require('mongodb');
-	// var BSON = mongo.BSONPure;
 	// var o_id = new BSON.ObjectID(query.dbID);
 
 	// this.posts.findAndModify( query, {	'_id':o_id
@@ -92,9 +92,6 @@ PostsMongo.prototype.findAndModifyPost = function( query, post, callback ){
 
 
 PostsMongo.prototype.findAndIncrementPost = function( postID, callback ){
-		
-	var mongo = require('mongodb');
-	var BSON = mongo.BSONPure;
 	var o_id = new BSON.ObjectID(postID);
 	
 	this.posts.findOne({ $query: { _id: o_id } }, function (error, post) {
@@ -233,8 +230,6 @@ PostsMongo.prototype.findOne = function ( query, callback ) {
 
 
 PostsMongo.prototype.findOnePost = function ( postID, callback ) {
-	var mongo = require('mongodb');
-	var BSON = mongo.BSONPure;
 	var o_id = new BSON.ObjectID(postID);
 
 	this.posts.findOne({ $query: { _id: o_id } }, function (error, post) {
@@ -368,8 +363,6 @@ PostsMongo.prototype.updatePost = function (postData, callback) {
 	
 	console.log(postData);
 
-	var mongo = require('mongodb');
-	var BSON = mongo.BSONPure;
 	var o_id = new BSON.ObjectID(postData.id);
 
 	this.posts.update(	{_id: o_id },
@@ -393,8 +386,6 @@ PostsMongo.prototype.updateOrder = function (dbID, statusVal, callback) {
 	// console.log(dbID);
 	// console.log(statusVal);
 	
-	var mongo = require('mongodb');
-	var BSON = mongo.BSONPure;
 	var o_id = new BSON.ObjectID(dbID);
 
 	this.posts.update(	{_id: o_id },
@@ -414,8 +405,6 @@ PostsMongo.prototype.setPublishedStatus = function (dbID, publishedVal, callback
 	// console.log(dbID);
 	// console.log(publishedVal);
 	
-	var mongo = require('mongodb');
-	var BSON = mongo.BSONPure;
 	var o_id = new BSON.ObjectID(dbID);
 
 	var postsDB = this.posts;

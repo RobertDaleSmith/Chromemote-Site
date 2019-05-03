@@ -1,5 +1,8 @@
 "use strict";
-var ObjectID = require('mongodb').ObjectID;
+
+var BSON = require('bson').BSONPure;
+var mongo = require('mongodb');
+var ObjectID = mongo.ObjectID;
 
 /*
 This object will take a db object.
@@ -74,9 +77,6 @@ AdsMongo.prototype.findAndModifyAd = function( query, ad, callback ){
 
 
 AdsMongo.prototype.findAndIncrementAd = function( adID, callback ){
-		
-	var mongo = require('mongodb');
-	var BSON = mongo.BSONPure;
 	var o_id = new BSON.ObjectID(adID);
 	
 	this.ads.findOne({ $query: { _id: o_id } }, function (error, ad) {
@@ -215,8 +215,6 @@ AdsMongo.prototype.findOne = function ( query, callback ) {
 
 
 AdsMongo.prototype.findOneAd = function ( adID, callback ) {
-	var mongo = require('mongodb');
-	var BSON = mongo.BSONPure;
 	var o_id = new BSON.ObjectID(adID);
 
 	this.ads.findOne({ $query: { _id: o_id } }, function (error, ad) {
@@ -343,9 +341,7 @@ AdsMongo.prototype.setEnabledStatus = function (dbID, statusVal, callback) {
 
 	// console.log(dbID);
 	// console.log(statusVal);
-	
-	var mongo = require('mongodb');
-	var BSON = mongo.BSONPure;
+
 	var o_id = new BSON.ObjectID(dbID);
 
 	this.ads.update(	{_id: o_id },
@@ -364,8 +360,6 @@ AdsMongo.prototype.updateOrder = function (dbID, statusVal, callback) {
 	// console.log(dbID);
 	// console.log(statusVal);
 	
-	var mongo = require('mongodb');
-	var BSON = mongo.BSONPure;
 	var o_id = new BSON.ObjectID(dbID);
 
 	this.ads.update(	{_id: o_id },

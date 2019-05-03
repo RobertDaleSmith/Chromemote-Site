@@ -1,5 +1,7 @@
 "use strict";
-var ObjectID = require('mongodb').ObjectID;
+var BSON = require('bson').BSONPure;
+var mongo = require('mongodb');
+var ObjectID = mongo.ObjectID;
 
 /*
 This object will take a db object.
@@ -88,8 +90,6 @@ DevsMongo.prototype.findAndModifyUser = function( query, dev, callback ){
 		return callback( 'No data was provided' );
 	}
 	
-	// var mongo = require('mongodb');
-	// var BSON = mongo.BSONPure;
 	// var o_id = new BSON.ObjectID(query.dbID);
 
 	// this.devs.findAndModify( query, {	'_id':o_id
@@ -103,9 +103,6 @@ DevsMongo.prototype.findAndModifyUser = function( query, dev, callback ){
 
 
 DevsMongo.prototype.findAndIncrementUser = function( userID, callback ){
-		
-	var mongo = require('mongodb');
-	var BSON = mongo.BSONPure;
 	var o_id = new BSON.ObjectID(userID);
 	
 	this.devs.findOne({ $query: { _id: o_id } }, function (error, dev) {
@@ -244,8 +241,6 @@ DevsMongo.prototype.findOne = function ( query, callback ) {
 
 
 DevsMongo.prototype.findOneUser = function ( userID, callback ) {
-	var mongo = require('mongodb');
-	var BSON = mongo.BSONPure;
 	var o_id = new BSON.ObjectID(userID);
 
 	this.devs.findOne({ $query: { _id: o_id } }, function (error, dev) {
@@ -371,8 +366,6 @@ DevsMongo.prototype.updateUser = function (dbID, name, email, donation, callback
 	
 	console.log(donation);
 
-	var mongo = require('mongodb');
-	var BSON = mongo.BSONPure;
 	var o_id = new BSON.ObjectID(dbID);
 
 	this.devs.update(	{_id: o_id },
@@ -393,8 +386,6 @@ DevsMongo.prototype.updateOrder = function (dbID, statusVal, callback) {
 	// console.log(dbID);
 	// console.log(statusVal);
 	
-	var mongo = require('mongodb');
-	var BSON = mongo.BSONPure;
 	var o_id = new BSON.ObjectID(dbID);
 
 	this.devs.update(	{_id: o_id },
