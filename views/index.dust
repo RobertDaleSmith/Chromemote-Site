@@ -23,7 +23,7 @@
                         <button class="install_button" id="install_button" onclick = "window.open('https://chrome.google.com/webstore/detail/bhcjclaangpnjgfllaoodflclpdfcegb','_blank');" style="width:224px;"><div style="display:inline-block; vertical-align:top; line-height:21px; margin-left:-9px;"><img src="http://chromemote.com/wp-content/themes/wp-chromemote-3.0/images/install_button_arrow.png" align="left">&nbsp;&nbsp;&nbsp;INSTALL FREE!</div></button>
 
                         <br> -->
-                        <a class="web_store" href="https://chrome.google.com/webstore/detail/chromemote-remote-for-goo/bhcjclaangpnjgfllaoodflclpdfcegb">
+                        <a class="web_store" href="https://chrome.google.com/webstore/detail/bhcjclaangpnjgfllaoodflclpdfcegb/publish-accepted">
                             Available on the Chrome Web Store
                         </a>
                         

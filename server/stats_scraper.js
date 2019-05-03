@@ -51,7 +51,7 @@ function scrapeStats(){
 	var cswWeeklyUsers = 0,
 	    cswCommentsCnt = 0;	
 
-	var url = 'https://chrome.google.com/webstore/detail/chromemote-remote-for-goo/bhcjclaangpnjgfllaoodflclpdfcegb';
+	var url = 'https://chrome.google.com/webstore/detail/bhcjclaangpnjgfllaoodflclpdfcegb/publish-accepted';
 	request(url, function(err, resp, body) {
 		if (err) throw err;
 		var $ = cheerio.load(body);          

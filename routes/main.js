@@ -180,7 +180,7 @@ Main.prototype.payPalIPN = function( req, res, next ){
 			   			"User Account:\t"+ userData.email + "\n"+
 			   			"Product Key: \t"+ userData.product_key+ "\n\n"+
 			   			"Thanks Again,\nRobert Dale Smith\nChromemote Developer\nwww.Chromemote.com \n\n\n"+
-			   			"ps. If you enjoy using Chromemote, then please give us a review on the Chrome Web Store: \n https://chrome.google.com/webstore/detail/chromemote-remote-for-goo/bhcjclaangpnjgfllaoodflclpdfcegb/reviews", 
+			   			"ps. If you enjoy using Chromemote, then please give us a review on the Chrome Web Store: \n https://chrome.google.com/webstore/detail/bhcjclaangpnjgfllaoodflclpdfcegb/publish-accepted/reviews", 
 			   from:    "Robert Smith with Chromemote <robert@chromemote.com>", 
 			   to:      userData.name + " <" + userData.email + ">",
 			   cc:      "",
@@ -243,7 +243,7 @@ Main.prototype.payPalIPN = function( req, res, next ){
 			   			"User Account:\t"+ userData.email + "\n"+
 			   			"Product Key: \t"+ userData.product_key+ "\n\n"+
 			   			"Thanks Again,\nRobert Dale Smith\nChromemote Developer\nwww.Chromemote.com \n\n\n"+
-			   			"ps. If you enjoy using Chromemote, then please give us a review on the Chrome Web Store: \n https://chrome.google.com/webstore/detail/chromemote-remote-for-goo/bhcjclaangpnjgfllaoodflclpdfcegb/reviews", 
+			   			"ps. If you enjoy using Chromemote, then please give us a review on the Chrome Web Store: \n https://chrome.google.com/webstore/detail/bhcjclaangpnjgfllaoodflclpdfcegb/publish-accepted/reviews", 
 			   from:    "Robert Smith with Chromemote <robert@chromemote.com>", 
 			   to:      userData.name + " <" + userData.email + ">",
 			   cc:      "",
@@ -287,7 +287,7 @@ Main.prototype.amazonIOPN = function( req, res, next ){
 			   			"User Account:\t"+ userData.email + "\n"+
 			   			"Product Key: \t"+ userData.product_key+ "\n\n"+
 			   			"Thanks Again,\nRobert Dale Smith\nChromemote Developer\nwww.Chromemote.com \n\n\n"+
-			   			"ps. If you enjoy using Chromemote, then please give us a review on the Chrome Web Store: \n https://chrome.google.com/webstore/detail/chromemote-remote-for-goo/bhcjclaangpnjgfllaoodflclpdfcegb/reviews", 
+			   			"ps. If you enjoy using Chromemote, then please give us a review on the Chrome Web Store: \n https://chrome.google.com/webstore/detail/bhcjclaangpnjgfllaoodflclpdfcegb/publish-accepted/reviews", 
 			   from:    "Robert Smith with Chromemote <robert@chromemote.com>", 
 			   to:      userData.name + " <" + userData.email + ">",
 			   cc:      "",
@@ -385,7 +385,7 @@ Main.prototype.emailKey = function( req, res, next ){
 						   			"User Account:\t"+ userData.email + "\n"+
 						   			"Product Key: \t"+ userData.product_key+ "\n\n"+
 						   			"Thanks Again,\nRobert Dale Smith\nChromemote Developer\nwww.Chromemote.com \n\n\n"+
-						   			"ps. If you enjoy using Chromemote, then please give us a review on the Chrome Web Store: \n https://chrome.google.com/webstore/detail/chromemote-remote-for-goo/bhcjclaangpnjgfllaoodflclpdfcegb/reviews", 
+						   			"ps. If you enjoy using Chromemote, then please give us a review on the Chrome Web Store: \n https://chrome.google.com/webstore/detail/bhcjclaangpnjgfllaoodflclpdfcegb/publish-accepted/reviews", 
 					   from:    "Robert Smith with Chromemote <robert@chromemote.com>", 
 					   to:      userData.name + " <" + userData.email + ">",
 					   cc:      "",
@@ -525,7 +525,7 @@ Main.prototype.stripePayment = function( req, res, next ){
 					   			"User Account:\t"+ userData.email + "\n"+
 					   			"Product Key: \t"+ userData.product_key+ "\n\n"+
 					   			"Thanks Again,\nRobert Dale Smith\nChromemote Developer\nwww.Chromemote.com \n\n\n"+
-					   			"ps. If you enjoy using Chromemote, then please give us a review on the Chrome Web Store: \n https://chrome.google.com/webstore/detail/chromemote-remote-for-goo/bhcjclaangpnjgfllaoodflclpdfcegb/reviews", 
+					   			"ps. If you enjoy using Chromemote, then please give us a review on the Chrome Web Store: \n https://chrome.google.com/webstore/detail/bhcjclaangpnjgfllaoodflclpdfcegb/publish-accepted/reviews", 
 					   from:    "Robert Smith with Chromemote <robert@chromemote.com>", 
 					   to:      userData.name + " <" + userData.email + ">",
 					   cc:      "",
