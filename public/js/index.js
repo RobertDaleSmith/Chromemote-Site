@@ -383,8 +383,9 @@ function inlineCWS(id){
 		    if(document.getElementById("install_button")){
 		        document.getElementById("install_button").onclick = install;
 		    }
-		} 
-		// else window.open('https://chrome.google.com/webstore/detail/bhcjclaangpnjgfllaoodflclpdfcegb','_blank');
+		// } else {
+		// 	window.open('https://chrome.google.com/webstore/detail/bhcjclaangpnjgfllaoodflclpdfcegb/publish-accepted','_blank');
+		}
 
 	    if (document.getElementById('extension-is-installed')) {
 	        if(document.getElementById("install_button")){
@@ -401,19 +402,24 @@ function inlineCWS(id){
 	}
 
 	function install() {
-	    chrome.webstore.install("https://chrome.google.com/webstore/detail/"+webstoreID, success, fail);
-	    
-	    if (document.getElementById('extension-is-installed')) {
-	        if(document.getElementById("install_button")){
-	        	$('#install_button p').text("UPDATING...");
-	        	log("Updating existing.");
-	        }	                              
-	    } else {
-	        if(document.getElementById("install_button")){
-	        	$('#install_button p').text("INSTALLING...");
-	        	log("Installing new.");       
-	        }            
-	    }
+		if (chrome.webstore) {
+			chrome.webstore.install("https://chrome.google.com/webstore/detail/"+webstoreID, success, fail);
+
+			if (document.getElementById('extension-is-installed')) {
+		        if(document.getElementById("install_button")){
+		        	$('#install_button p').text("UPDATING...");
+		        	log("Updating existing.");
+		        }
+		    } else {
+		        if(document.getElementById("install_button")){
+		        	$('#install_button p').text("INSTALLING...");
+		        	log("Installing new.");
+		        }
+		    }
+		} else {
+			var url = 'https://chrome.google.com/webstore/detail/bhcjclaangpnjgfllaoodflclpdfcegb/publish-accepted';
+			window.open(url, '_blank');
+		}
 	}
 
 	function success() {
