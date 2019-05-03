@@ -164,8 +164,8 @@ mongo.connect(function(err) {
   app.all(/.*/, function(req, res, next) {
     var host = req.header("host");
     
-    if (host.match(/^www\..*/i) || host.match(/^api\..*/i)) {
-      res.redirect(301, "http://" + host.replace('www.','').replace('api.','') + req.originalUrl);
+    if (host.match(/^api\..*/i)) {
+      res.redirect(301, "http://" + host.replace('api.','') + req.originalUrl);
     } else {
       next();
     }
