@@ -104,12 +104,14 @@ mongo.connect(function(err) {
     app.use(express.cookieParser(dbInfo.cookieStr));
     app.use(session({
         secret: dbInfo.secret,
-        store: new MongoStore({
-            db: mongo.getDB(),
-            username: dbInfo.username,
-            password: dbInfo.password,
-            collection: 'admin-sessions'
-        }),
+        // store: new MongoStore({
+        //     db: mongo.getDB(),
+        //     username: dbInfo.username,
+        //     password: dbInfo.password,
+        //     collection: 'admin-sessions'
+        // }),
+        resave: false,
+        saveUninitialized: true,
         cookie: { maxAge: 24*60*60*1000 }
     }));
     app.use(app.router);

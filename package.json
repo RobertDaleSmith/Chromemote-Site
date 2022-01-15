@@ -19,14 +19,14 @@
     "cron": "*",
     "date-utils": "*",
     "dustjs-helpers": "*",
-    "dustjs-linkedin": "*",
+    "dustjs-linkedin": "^2.7.5",
     "emailjs": "*",
     "express": "3.11.0",
     "express-session": "^1.16.1",
     "mongodb": "^2.2.36",
     "paypal-ipn": "*",
     "request": "*",
-    "sitemap": "*",
+    "sitemap": "1.10.0",
     "stripe": "*"
   },
   "devDependencies": {

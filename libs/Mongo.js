@@ -5,7 +5,12 @@ var async = require('async');
 var Mongo = exports.Mongo = function( dbInfo ) {
 	if (typeof(dbInfo) !== 'undefined') {
 		this._dbInfo = dbInfo;
-		this._db = new mongoDB( dbInfo.name, new mongoServer( dbInfo.url, dbInfo.port, { auto_reconnect:true } ), { safe:true } );
+		this._db = new mongoDB( dbInfo.name, new mongoServer( dbInfo.url, dbInfo.port, {
+			auto_reconnect:true,
+			ssl:true,
+		}), {
+			safe:true
+		});
 		this._collections = {};
 	}
 }

@@ -2,6 +2,15 @@
 var BSON = require('bson').BSONPure;
 var mongo = require('mongodb');
 var ObjectID = mongo.ObjectID;
+var fs = require('fs');
+var readJson = (path, cb) => {
+  fs.readFile(require.resolve(path), (err, data) => {
+    if (err)
+      cb(err)
+    else
+      cb(null, JSON.parse(data))
+  })
+}
 
 /*
 This object will take a db object.
@@ -238,6 +247,19 @@ PostsMongo.prototype.findOnePost = function ( postID, callback ) {
 }
 
 
+PostsMongo.prototype.findOnePostByPath = function ( path, callback ) {
+
+	readJson('../collections/blog-posts.json', (err, docs) => {
+		var posts = [];
+		if (docs.posts) posts = docs.posts;
+		posts = posts.filter(function(a){return (a && a.path === path)});
+		posts = posts.sort(function(a,b){return (new Date(b.date) - new Date(a.date))});
+    callback(err, {...posts[0]});
+  });
+
+}
+
+
 PostsMongo.prototype.findFeaturedOne = function ( query, callback ) {
 	this.featured.findOne( query, function (error, post) {
 		callback(error, post);
@@ -253,18 +275,32 @@ PostsMongo.prototype.count = function () {
 PostsMongo.prototype.getAll = function (callback) {
 	
 	//Gets all docs.
-	this.posts.find({ $query: {} }).sort({ _id: -1 }).toArray(function(err, docs) {
-		//console.log("All docs: " + docs);
-		callback(err, docs);
-	});
+	// this.posts.find({ $query: {} }).sort({ _id: -1 }).toArray(function(err, docs) {
+	// 	//console.log("All docs: " + docs);
+	// 	callback(err, docs);
+	// });
+
+	readJson('./collections/blog-posts.json', (err, docs) => {
+		console.log('docs!!');
+		console.log(docs);
+    callback(err, docs);
+  });
 
 }
 
 PostsMongo.prototype.getLivePosts = function (callback) {
 
-	this.posts.find({ $query: { live: true } }).sort({ date: -1 }).toArray(function(err, docs) {
-		callback(err, docs);
-	});
+	// this.posts.find({ $query: { live: true } }).sort({ date: -1 }).toArray(function(err, docs) {
+	// 	callback(err, docs);
+	// });
+
+	readJson('../collections/blog-posts.json', (err, docs) => {
+		var posts = [];
+		if (docs.posts) posts = docs.posts;
+		posts = posts.filter(function(a){return (a && a.live)});
+		posts = posts.sort(function(a,b){return (new Date(b.date) - new Date(a.date))});
+    callback(err, posts);
+  });
 	
 }
 
@@ -272,25 +308,41 @@ PostsMongo.prototype.checkForNewPosts = function (postID, callback) {
 	//console.log(postID);
 	//postID = "381966172352049152";
 
-	this.posts.find({ $query: { approval_status: 1 } }).sort({ id_str: -1 }).toArray(function(err, docs) {
-		var obj = [];
-		for(var i = 0; i < docs.length; i++){
-			if(docs[i].id_str == postID)
-				break;
-			obj[i] = docs[i];
-		}	    
-		callback(err, JSON.stringify(obj));
-	});
+	// this.posts.find({ $query: { approval_status: 1 } }).sort({ id_str: -1 }).toArray(function(err, docs) {
+	// 	var obj = [];
+	// 	for(var i = 0; i < docs.length; i++){
+	// 		if(docs[i].id_str == postID)
+	// 			break;
+	// 		obj[i] = docs[i];
+	// 	}	    
+	// 	callback(err, JSON.stringify(obj));
+	// });
+
+	readJson('../collections/blog-posts.json', (err, docs) => {
+		var posts = [];
+		if (docs.posts) posts = docs.posts;
+		posts = posts.filter(function(a){return (a && a.enabled_status)});
+		posts = posts.sort(function(a,b){return (new Date(b.date) - new Date(a.date))});
+    callback(err, posts);
+  });
 	
 }
 
 PostsMongo.prototype.getAllEnabled = function (callback) {
 	
 	//Gets all docs.
-	this.posts.find({ $query: { enabled_status: 1 } }).sort({ order: 1 }).toArray(function(err, docs) {
-		//console.log("All docs: " + docs);
-		callback(err, docs);
-	});
+	// this.posts.find({ $query: { enabled_status: 1 } }).sort({ order: 1 }).toArray(function(err, docs) {
+	// 	//console.log("All docs: " + docs);
+	// 	callback(err, docs);
+	// });
+
+	readJson('../collections/blog-posts.json', (err, docs) => {
+		var posts = [];
+		if (docs.posts) posts = docs.posts;
+		posts = posts.filter(function(a){return (a && a.enabled_status)});
+		posts = posts.sort(function(a,b){return (new Date(b.date) - new Date(a.date))});
+    callback(err, posts);
+  });
 
 }
 

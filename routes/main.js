@@ -317,7 +317,17 @@ Main.prototype.blogPost = function( req, res, next ){
 	res.locals.loggedIn = req.session.loggedIn;
 	var path = req.params.path;
 
-	postsDB.findOne({"path":{ $regex: new RegExp("^" + path.toLowerCase(), "i") }}, function(error, doc){
+	// postsDB.findOne({"path":{ $regex: new RegExp("^" + path.toLowerCase(), "i") }}, function(error, doc){
+	// 	//console.log(doc);
+	// 	if(doc.live){
+	// 		res.locals.post = doc;
+	// 		res.render('blog_post',  { title: "Chromemote - Blog | " + doc.title, pageName: "blog" });
+	// 	} else {
+	// 		res.redirect("/404");
+	// 	}
+	// });
+
+	postsDB.findOnePostByPath(path.toLowerCase(), function(error, doc){
 		//console.log(doc);
 
 		if(doc.live){
