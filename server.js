@@ -3,7 +3,7 @@ var express = require('express')
   , http = require('http')
   , cons = require('consolidate')
   , cors = require('cors')
-  , MongoStore = require( 'connect-mongodb' )
+  // , MongoStore = require( 'connect-mongodb' )
   , config = require('config');
 
 var session = require('express-session');
@@ -21,7 +21,7 @@ var dbInfo = {
   collections: dbConfig.collections,
 };
 
-var mongo = new (require('./libs/Mongo').Mongo)(dbInfo);
+var mongo = {connect:(fn)=>fn()}; //new (require('./libs/Mongo').Mongo)(dbInfo);
 
 //Custom Dust.JS helpers
 var dust = require('dustjs-linkedin');
@@ -104,12 +104,12 @@ mongo.connect(function(err) {
     app.use(express.cookieParser(dbInfo.cookieStr));
     app.use(session({
         secret: dbInfo.secret,
-        store: new MongoStore({
-            db: mongo.getDB(),
-            username: dbInfo.username,
-            password: dbInfo.password,
-            collection: 'admin-sessions'
-        }),
+        // store: new MongoStore({
+        //     db: mongo.getDB(),
+        //     username: dbInfo.username,
+        //     password: dbInfo.password,
+        //     collection: 'admin-sessions'
+        // }),
         cookie: { maxAge: 24*60*60*1000 }
     }));
     app.use(app.router);
