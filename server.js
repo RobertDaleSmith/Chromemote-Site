@@ -3,7 +3,7 @@ var express = require('express')
   , http = require('http')
   , cons = require('consolidate')
   , cors = require('cors')
-  , MongoStore = require( 'connect-mongodb' )
+  // , MongoStore = require( 'connect-mongodb' )
   , config = require('config');
 
 var session = require('express-session');
@@ -21,7 +21,7 @@ var dbInfo = {
   collections: dbConfig.collections,
 };
 
-var mongo = new (require('./libs/Mongo').Mongo)(dbInfo);
+var mongo = {connect:(fn)=>fn()}; //new (require('./libs/Mongo').Mongo)(dbInfo);
 
 //Custom Dust.JS helpers
 var dust = require('dustjs-linkedin');

@@ -10,7 +10,7 @@ It makes assumption that DB connection is established and authenticated.
 */
 var AdsMongo = exports.AdsMongo = function(spec) {
 	this.mongo = spec.mongo;
-	this.ads = this.mongo.getCollection('sponsor-ads');
+	this.ads = [];//this.mongo.getCollection('sponsor-ads');
 }
 
 var isEmpty = function (obj) {

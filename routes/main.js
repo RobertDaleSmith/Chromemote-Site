@@ -13,6 +13,8 @@ var postsDB = null,
 	devsDB  = null,
 	statsDB = null;
 
+var blogPosts = require('../collections/blog-posts.json');
+
 var Main = function( mongo ) {
 	var self = this;
 	if( typeof mongo === 'undefined' ) { console.log( 'Admin( undefined )!'); }
@@ -60,29 +62,29 @@ Main.prototype.press = function( req, res, next ){
 
 Main.prototype.contribute = function( req, res, next ){
 	
-	usersDB.getAll(function(error, docs){
+	// usersDB.getAll(function(error, docs){
 		//console.log(error);
-		if(docs!=null && error==null){
+		// if(docs!=null && error==null){
 			var stats = {}; 
 			var payPalTotal = 0,
 		        amazonTotal = 0,
 		        googleTotal = 0,
 		        stripeTotal = 0,
-		        proUserTotal = docs.length,
+		        proUserTotal = 0,//docs.length,
 		        amountTotal = 0,
 		        weeklyTotal = 0,
 		        donationAvg = 0,
 		        donationTotal = 0;
 
-		    for(var i=0; i<docs.length; i++){
-		    	for(var n=0; n<docs[i].donation.length; n++){
-			    	amountTotal = amountTotal + parseInt(docs[i].donation[n].amount);
-			    	if(docs[i].donation[n].source == "paypal") payPalTotal++;
-				    if(docs[i].donation[n].source == "amazon") amazonTotal++;
-				    if(docs[i].donation[n].source == "google_wallet") googleTotal++;
-				    if(docs[i].donation[n].source == "stripe") stripeTotal++;
-			    }		    
-		    }
+		    // for(var i=0; i<docs.length; i++){
+		    // 	for(var n=0; n<docs[i].donation.length; n++){
+			   //  	amountTotal = amountTotal + parseInt(docs[i].donation[n].amount);
+			   //  	if(docs[i].donation[n].source == "paypal") payPalTotal++;
+				  //   if(docs[i].donation[n].source == "amazon") amazonTotal++;
+				  //   if(docs[i].donation[n].source == "google_wallet") googleTotal++;
+				  //   if(docs[i].donation[n].source == "stripe") stripeTotal++;
+			   //  }		    
+		    // }
 		    donationTotal = payPalTotal+amazonTotal+googleTotal+stripeTotal;
 
 		    
@@ -91,20 +93,20 @@ Main.prototype.contribute = function( req, res, next ){
 
 		    // console.log("donationAvg "+ donationAvg);
 
-		    statsDB.getAll(function(err, docs){
+		    // statsDB.getAll(function(err, docs){
 		    	//console.log(docs);
 
-		    	docs.sort(function(a,b) { return (new Date(b.date)) - (new Date(a.date)) } );
+		    	// docs.sort(function(a,b) { return (new Date(b.date)) - (new Date(a.date)) } );
 		    	
 		    	var weeklyUsers = [];
-		    	for(var i=0; i<docs.length; i++){
-		    		delete docs[i]._id;
-		    	}
-		    	if(docs.length > 0) {
-		    		for(var i=docs.length-1; i>=0; i--){
-		    			weeklyUsers.push( docs[i] );
-		    		}
-		    	}
+		    	// for(var i=0; i<docs.length; i++){
+		    	// 	delete docs[i]._id;
+		    	// }
+		    	// if(docs.length > 0) {
+		    	// 	for(var i=docs.length-1; i>=0; i--){
+		    	// 		weeklyUsers.push( docs[i] );
+		    	// 	}
+		    	// }
 
 		    	var weeklyStat = weeklyUsers[weeklyUsers.length-1];
 		    	var weeklyUserCount = weeklyStat && weeklyStat.users ? weeklyStat.users : 0;
@@ -121,9 +123,9 @@ Main.prototype.contribute = function( req, res, next ){
 					  };
 			    
 			    res.render('contribute',  { title: "Chromemote - Contribute cash, code, or comments.", pageName: "contirbute", stats: stats });
-		    });
-		}	    
-	});	
+		    // });
+		// }	    
+	// });	
 
 	
 	

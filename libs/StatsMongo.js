@@ -9,7 +9,7 @@ It makes assumption that DB connection is established and authenticated.
 */
 var StatsMongo = exports.StatsMongo = function(spec) {
 	this.mongo = spec.mongo;
-	this.stats = this.mongo.getCollection('store-stats');
+	this.stats = [];//this.mongo.getCollection('store-stats');
 }
 
 

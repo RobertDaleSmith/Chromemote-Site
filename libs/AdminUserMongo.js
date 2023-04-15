@@ -8,7 +8,7 @@ It makes assumption that DB connection is established and authenticated.
 */
 var AdminUserMongo = exports.AdminUserMongo = function(spec) {
 	this.mongo = spec.mongo;
-	this.adminUsers = this.mongo.getCollection('admin-users');
+	this.adminUsers = [];//this.mongo.getCollection('admin-users');
 	// this.theme = this.mongo.getCollection('theme');
 }
 
