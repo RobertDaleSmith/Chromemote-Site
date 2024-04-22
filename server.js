@@ -129,9 +129,10 @@ mongo.connect(function(err) {
   var Admin = require('./routes/admin.js').initAdmin;
   routes.Admin = new Admin(mongo);
 
-  var Stats = require('./server/stats_scraper.js').initStats;
-  statsScraper = new Stats(mongo);
-  statsScraper.startScheduler();
+  // Disabled since app store listing no longer active in 2024.
+  // var Stats = require('./server/stats_scraper.js').initStats;
+  // statsScraper = new Stats(mongo);
+  // statsScraper.startScheduler();
 
   /* Middlewares */
   function requiresLogin(req, res, next) {
